@@ -1,6 +1,6 @@
 # Facemask-Detector-ZCU104
 
-FPGA-based system that monitors facemask use through artificial intelligence, temperature meter and facemask dispenser.
+FPGA-based system that monitors facemask use through artificial intelligence, thermometer and facemask dispenser.
 
 <img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000">
 
@@ -18,6 +18,8 @@ FPGA-based system that monitors facemask use through artificial intelligence, te
 * [References](#references)
 
 # Introduction:
+
+COVID-19 ha cambiado nuestra vida diaria y continúa haciéndolo. Muchos negocios han quebrado debido a tener que cerrar debido a la pendemia, sin embargo algunos otros han optado por la reapertura de comercios e institutos públicos como museos, bibliotecas, etc. Tomando medidas de precaucion, generando nuevas normativas. Una disposición básica es obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento dentro de los negocios.
 
 <img src="IMAGEURL" width="1000">
 
