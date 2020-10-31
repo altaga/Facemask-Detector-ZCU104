@@ -1,0 +1,3 @@
+[submodule "Facemask-Dataset"]
+	path = Facemask-Dataset
+	url = https://github.com/altaga/Facemask-Dataset

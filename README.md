@@ -198,6 +198,10 @@ The setup process to run everything on the jetson nano are in this folder:
 
 https://github.com/altaga/DBSE-monitor/tree/master/Jetson
 
+# Benchmark ZCU104, Jetson Nano and RPi4
+
+Jetson:
+<img src="https://i.ibb.co/gMt1QwH/image.png" width="800">
 
 # The Final Product:
 
