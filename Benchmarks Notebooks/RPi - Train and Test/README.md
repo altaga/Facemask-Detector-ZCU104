@@ -32,8 +32,8 @@ Para instalar TFlite Interpreter:
 
 NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el dataset en la plataforma de Google Colab, sin embargo aqui te dejo las dos opciones para descargar el dataset.
 
-Github: https://github.com/altaga/Facemask-Dataset
-Kaggle: https://www.kaggle.com/altaga/facemaskdataset
+- Github: https://github.com/altaga/Facemask-Dataset
+- Kaggle: https://www.kaggle.com/altaga/facemaskdataset
 
 Model running:
 
