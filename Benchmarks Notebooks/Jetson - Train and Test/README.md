@@ -20,7 +20,7 @@ Las librerias utilizadas para correr el modelo fueron:
 
 Para instalar las librerias excepto TFlite Interpreter:
 
-    sudo apt-get install keras sklearn opencv
+    sudo apt-get install keras sklearn python3-opencv
     pip3 install Pillow
 
 El modelo puede ser entrenado y ejecutado en la misma Jetson Nano con el fin de facilitar la ejecucion del codigo.
