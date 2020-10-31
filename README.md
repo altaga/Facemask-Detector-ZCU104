@@ -11,6 +11,8 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
 - ZCU104
     - Vitis AI - Keras optimized Model.
 
+    <br />
+
 | Board       | Model                    | Mode      | FPS |
 |  :--------: | :----------------------: | :-------: | :-: |
 | Rpi 4 - 4gb | TfLite                   | Standard  | 55  |
@@ -22,5 +24,5 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
 <br />
 
 <kbd>
-<img src="https://raw.githubusercontent.com/altaga/Facemask-Detector-ZCU104/main/Benchmarks%20Notebooks/Evidence/FinalBenchmark.png?token=AD6LORUWZ3M62234NZNLCPK7TUCEA" width="1000" />
+<img src="https://raw.githubusercontent.com/altaga/Facemask-Detector-ZCU104/main/Benchmarks%20Notebooks/Evidence/FinalBenchmark.png" width="1000" />
 </kbd>
