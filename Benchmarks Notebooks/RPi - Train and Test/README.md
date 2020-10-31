@@ -6,7 +6,7 @@ https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?resellerType=home
 
 Para entrenar el modelo se utilizo un Notebook en Google Colab con el fin de facilitar el entrenamiento del modelo.
 
-https://github.com/altaga/Facemask-Detector-ZCU104/blob/main/Benchmarks%20Notebooks/RPi%20-%20Train%20and%20Test/Train/RPi_Train_Model.ipynb
+https://github.com/altaga/Facemask-Detector-ZCU104/blob/main/Benchmarks%20Notebooks/RPi%20-%20Train%20and%20Test/Train/RPi_Train_Models.ipynb
 
 El sistema operativo que se instalo en la raspberry fue Raspberry OS:
 
