@@ -33,5 +33,10 @@ NOTA: el codigo ya contiene el comando para descargar el dataset dentro de la je
 - Github: https://github.com/altaga/Facemask-Dataset
 - Kaggle: https://www.kaggle.com/altaga/facemaskdataset
 
-<img src="https://raw.githubusercontent.com/altaga/Facemask-Detector-ZCU104/main/Benchmarks%20Notebooks/Evidence/FinalBenchmark.png" width="1000" />
+Model runs:
+
+<kbd>
+<img src="https://i.ibb.co/2nH3rtv/20201029-045451.jpg" width="1000" />
 </kbd>
+
+Check "Evidence" folder with images and videos taken with the model running.

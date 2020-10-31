@@ -34,3 +34,11 @@ NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el d
 
 Github: https://github.com/altaga/Facemask-Dataset
 Kaggle: https://www.kaggle.com/altaga/facemaskdataset
+
+Model running:
+
+<kbd>
+<img src="https://i.ibb.co/6J7kty6/RPi-Opt-Model-2.jpg" width="1000" />
+</kbd>
+
+Check "Evidence" folder with images and videos taken with the model running.
