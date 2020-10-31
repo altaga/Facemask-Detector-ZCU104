@@ -13,12 +13,12 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
 
     <br />
 
-| Board       | Model                    | Mode      | FPS |
-|  :--------: | :----------------------: | :-------: | :-: |
-| Rpi 4 - 4gb | TfLite                   | Standard  | 55  |
-| Rpi 4 - 4gb | TfLite Optimized         | Standard  | 47  |
-| Jetson Nano | Tf Model                 | Max       | 90  |
-| Jetson Nano | TfLite                   | 5W        | 41  |
+| Board       | Model                           | Mode      | FPS |
+|  :--------: | :-----------------------------: | :-------: | :-: |
+| Rpi 4 - 4gb | TfLite                          | Standard  | 55  |
+| Rpi 4 - 4gb | TfLite Optimized                | Standard  | 47  |
+| Jetson Nano | Tf Model                        | Max       | 90  |
+| Jetson Nano | Tf Model                        | 5W        | 41  |
 | ZCU104      | Vitis AI <br /> Optimized Model | Standard  | 400 |
 
 <br />
