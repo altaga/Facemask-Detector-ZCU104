@@ -1,26 +1,35 @@
-# RPi vs Jetson vs ZCU104
+# ZCU104
 
-Se realizaron test de las siguientes boards para comparar si esta siendo mejor el uso de la ZCU104 para este tipo de problemas.
+Toda la informacion de la ZCU104 estara en este link:
 
-- RPi4 with 4gb
-    - Tensor Flow Lite Model.
-    - Tensor Flow Lite Optimized Model.
-- Jetson Nano 4gb
-    - Tensor Flow Model MAX Consumption Mode.
-    - Tensor Flow Model 5W Consumption Mode.
-- ZCU104
-    - Vitis AI - Keras optimized Model.
+https://www.xilinx.com/products/boards-and-kits/zcu104.html
 
-| Board       | Model                    | Mode      | FPS |
-|  :--------: | :----------------------: | :-------: | :-: |
-| Rpi 4 - 4gb | TfLite                   | Standard  | 55  |
-| Rpi 4 - 4gb | TfLite Optimized         | Standard  | 47  |
-| Jetson Nano | Tf Model                 | Max       | 90  |
-| Jetson Nano | TfLite                   | 5W        | 41  |
-| ZCU104      | Vitis AI <br /> Optimized Model | Standard  | 400 |
+Para entrenar el modelo se utilizo un Notebook en corriendo con el backend de Vitis-AI en una maquina Ubuntu 20.04.
 
-<br />
+Backend para entrenamiento de la red neuronal:
+
+https://github.com/Xilinx/Vitis-AI
+
+Todo el proceso de instalacion, ejecucion del backend, entrenamiento y deploy del modelo se explicara a detalle en el readme principal.
+
+https://github.com/altaga/Facemask-Detector-ZCU104
+
+El sistema operativo que se instalo en la ZCU104 fue PYQN:
+
+Main Page: http://www.pynq.io/board.html
+OS Direct download: http://bit.ly/zcu104_v2_6
+
+NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el dataset en ubuntu, sin embargo aqui te dejo las dos opciones para descargar el dataset.
+
+- Github: https://github.com/altaga/Facemask-Dataset
+- Kaggle: https://www.kaggle.com/altaga/facemaskdataset
+
+PENDING!!!!
+
+Model running:
 
 <kbd>
-<img src="https://raw.githubusercontent.com/altaga/Facemask-Detector-ZCU104/main/Benchmarks%20Notebooks/Evidence/FinalBenchmark.png?token=AD6LORUWZ3M62234NZNLCPK7TUCEA" width="1000" />
+<img src="https://i.ibb.co/6J7kty6/RPi-Opt-Model-2.jpg" width="600" />
 </kbd>
+
+Check "Evidence" folder with images and videos taken with the model running.

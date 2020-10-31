@@ -14,12 +14,7 @@ https://www.raspberrypi.org/downloads/raspberry-pi-os/
 
 NOTA: El codigo se realizo para funcionar con la camara integrada de la raspberry.
 
-Las librerias utilizadas para correr el modelo fueron:
-
-- Pillow
-- Numpy
-- OpenCV
-- tflite.runtime.interpreter
+z
 
 Para instalar las librerias excepto TFlite Interpreter:
 
