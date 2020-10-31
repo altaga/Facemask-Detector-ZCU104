@@ -23,12 +23,12 @@ Las librerias utilizadas para correr el modelo fueron:
 
 Para instalar las librerias excepto TFlite Interpreter:
 
-sudo apt-get install libatlas-base-dev python3-opencv
-pip3 install Pillow
+    sudo apt-get install libatlas-base-dev python3-opencv
+    pip3 install Pillow
 
 Para instalar TFlite Interpreter:
 
-pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
+    pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
 
 NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el dataset en la plataforma de Google Colab, sin embargo aqui te dejo las dos opciones para descargar el dataset.
 
