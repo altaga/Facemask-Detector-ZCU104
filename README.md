@@ -19,9 +19,31 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
 
 # Introduction:
 
-COVID-19 ha cambiado nuestra vida diaria y continúa haciéndolo. Muchos negocios han quebrado debido a tener que cerrar debido a la pendemia, sin embargo algunos otros han optado por la reapertura de comercios e institutos públicos como museos, bibliotecas, etc. Tomando medidas de precaucion, generando nuevas normativas. Una disposición básica es obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento dentro de los negocios.
+El COVID-19 ha cambiado nuestro dia a dia y continúa haciéndolo. Muchos negocios y empresas han quebrado ya que al cerrar, no han podido ofrecer sus servicios a sus clientes, sin embargo algunos otros han optado por la reapertura de sus comercios a su vez tambien han abierto los institutos públicos como museos, bibliotecas, etc. Todos estos establecimientos han tomando sus medidas de precaucion, generando nuevas normativas, tales como obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento [1].
 
-<img src="IMAGEURL" width="1000">
+<img src="https://i.ibb.co/8xsD8DZ/image.png" width="1000">
+
+Ante esta nueva normativa los negocios han tenido que generar un puesto de empleo para que un trabajador revise el uso del cubrebocas y revise la temperatura de los clientes antes de entrar al establecimiento, arriesgando no solo al trabajador que esta checando la temperatura de los clientes, sino a los clientes mismos que entran al lugar. 
+
+1. https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiX_NyUiqU0d44aUqMNK7LVrXMOQWMfqr0MUUo8TKrJLpObf91qRUcUaAjKbEALw_wcB
+
+# Problem:
+
+Este puesto de trabajo genera un costo anual por trabajador de almenos $30,000 [1] y si ese empleado llegara a enfermarse de covid-19 por ley en estados unidos tendrian que pagarle almenos $511 al dia [2].
+
+Este costo por un empleado que realiza una tarea repetitiva es excesivo pero necesario, debido a que las soluciones actualmente creadas aun no son suficientes para sustituir este puesto.
+
+- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+
+1. https://www.ziprecruiter.com/Salaries/Retail-Security-Officer-Salary
+2. https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf
 
 # Solution:
 
