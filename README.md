@@ -1,8 +1,14 @@
 # Facemask-Detector-ZCU104
 
+<img src="https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png" width="500">
+
+# Facemask-Detector-ZCU104
+
 FPGA-based system that monitors facemask use through artificial intelligence, thermometer and facemask dispenser.
 
+<p align="center">
 <img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000">
+</p>
 
 # Table of contents
 
@@ -52,28 +58,28 @@ Este costo por un empleado que realiza una tarea repetitiva es excesivo pero nec
 # Materials:
 
 Hardware:
-- NVIDIA Jetson Nano.                                x1.
-https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/
-- Power Inverter for car.
-https://www.amazon.com/s?k=power+inverter+truper&ref=nb_sb_noss_2
+- ZCU104.                                x1.
+https://www.xilinx.com/products/boards-and-kits/zcu104.html
 - ESP32.
 https://www.adafruit.com/product/3405
-- OLED display.
-https://www.amazon.com/dp/B072Q2X2LL/ref=cm_sw_em_r_mt_dp_U_TMGqEb9YAGJ5Q
-- Any Bluetooth Speaker or Bluetooth Audio Car System. x1.
-https://www.amazon.com/s?k=speaker&s=price-asc-rank&page=2&qid=1581202023&ref=sr_pg_2
-- USB TP-Link USB Wifi Adapter TL-WN725N.            x1.
-https://www.amazon.com/dp/B008IFXQFU/ref=cm_sw_em_r_mt_dp_U_jNukEbCWXT0E4
+- DEVMO 8448 LCD.
+https://www.amazon.com/dp/B07R55C8PV/ref=cm_sw_em_r_mt_dp_giyUFbRP14KMC
+- MLX90614ESF Non-contact Infrared Temperature Sensor. x1.
+https://www.amazon.com/dp/B071VF2RWM/ref=cm_sw_em_r_mt_dp_UgyUFbECN8FZT?_encoding=UTF8&psc=1
+- Micro Digital Servo Motor. x1.
+https://www.amazon.com/dp/B01M5LIKLQ/ref=cm_sw_em_r_mt_dp_4jyUFb74BZM780
+- USB TP-Link USB Wifi Adapter TL-WN823N.            x1.
+https://www.amazon.com/dp/B0088TKTY2/ref=cm_sw_em_r_mt_dp_.CyUFbCJWK6S3
 - UGREEN USB Bluetooth 4.0 Adapter                   x1.
 https://www.amazon.com/dp/B01LX6HISL/ref=cm_sw_em_r_mt_dp_U_iK-BEbFBQ76BW
-- HD webcam                      .                   x1.
-https://canyon.eu/product/cne-cwc2/
-- 32 GB MicroSD Card.                                x1.
-https://www.amazon.com/dp/B06XWN9Q99/ref=cm_sw_em_r_mt_dp_U_XTllEbK0VKMAZ
-- 5V-4A AC/DC Adapter Power Supply Jack Connector.   x1.
-https://www.amazon.com/dp/B0194B80NY/ref=cm_sw_em_r_mt_dp_U_ISukEbJN7ABK3
-- VMA204.                                            x1.
-https://www.velleman.eu/products/view?id=435512
+- See3CAM_CU30 - 3.4 MP. (Included in the kit) x1.
+https://www.e-consystems.com/ar0330-lowlight-usb-cameraboard.asp
+- 16 GB MicroSD Card (Included in the kit).                                x1.
+https://www.amazon.com/dp/B07CMW9ZQ6/ref=cm_sw_em_r_mt_dp_dNyUFbJQ1MAR5?_encoding=UTF8&psc=1
+- 12-5A AC/DC Adapter Power Supply Jack Connector. (Included in the kit)  x1.
+https://www.amazon.com/dp/B08764G7HT/ref=cm_sw_em_r_mt_dp_UKyUFbTW57FT4?_encoding=UTF8&psc=1
+- Targus 4-Port USB 3.0 Hub (Included in the kit).                           x1.
+https://www.amazon.com/dp/B00P937GQ4/ref=cm_sw_em_r_mt_dp_BIyUFbRTB52V3
 
 Software:
 - Pytorch:
