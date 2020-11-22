@@ -14,8 +14,6 @@ https://www.raspberrypi.org/downloads/raspberry-pi-os/
 
 NOTA: El codigo se realizo para funcionar con la camara integrada de la raspberry.
 
-z
-
 Para instalar las librerias excepto TFlite Interpreter:
 
     sudo apt-get install libatlas-base-dev python3-opencv
