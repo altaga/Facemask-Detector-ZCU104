@@ -27,7 +27,7 @@ El modelo puede ser entrenado y ejecutado en la misma Jetson Nano con el fin de 
 
 NOTA: el codigo ya contiene el comando para descargar el dataset dentro de la jetson, sin embargo aqui te dejamos las dos opciones para descargar el dataset.
 
-- Github: https://github.com/altaga/Facemask-Dataset
+- Github: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Setup%20Notebook%20and%20Dataset/facemask-dataset
 - Kaggle: https://www.kaggle.com/altaga/facemaskdataset
 
 Model runs:

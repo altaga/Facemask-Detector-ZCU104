@@ -196,7 +196,7 @@ En el [Appendix A](#appendix-a) les dejo el contenido de los Scipts.
 
 ## Train the model:
 
-Para realizar el entrenamiento, en la carpeta Vitis-AI, tendras que pegar la carpeta facemask-dataset dentro de Facemask-Dataset y el archivo train_facemask_model.ipynb dentro del folder Setup Notebook.
+Para realizar el entrenamiento, copia todos los archivos dentro de la carpeta de repositorio "Setup Notebook and Dataset" a la capeta Vitis-AI para el correcto funcionamiento del codigo.
 
 Justo como se ve en la imagen.
 
@@ -357,3 +357,23 @@ Links:
     cd Vitis-AI
     docker pull xilinx/vitis-ai:latest
     cd     
+
+## install_cpu.sh
+
+    #!/bin/sh
+    cd Vitis-AI/docker
+    sudo bash ./docker_build_cpu.sh
+    cd   
+
+## install_gpu.sh
+
+    #!/bin/sh
+    cd Vitis-AI/docker
+    sudo bash ./docker_build_gpu.sh
+    cd    
+
+## install_vitis.sh
+
+    #!/bin/sh
+    cd Vitis-AI
+    sudo bash docker_run.sh xilinx/vitis-ai-cpu:latest    

@@ -21,15 +21,13 @@ OS Direct download: http://bit.ly/zcu104_v2_6
 
 NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el dataset en ubuntu, sin embargo aqui te dejo las dos opciones para descargar el dataset.
 
-- Github: https://github.com/altaga/Facemask-Dataset
+- Github: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Setup%20Notebook%20and%20Dataset/facemask-dataset
 - Kaggle: https://www.kaggle.com/altaga/facemaskdataset
 
-PENDING!!!!
-
-Model running:
+Model runs:
 
 <kbd>
-<img src="https://i.ibb.co/6J7kty6/RPi-Opt-Model-2.jpg" width="600" />
+<img src="https://i.ibb.co/2nH3rtv/20201029-045451.jpg" width="1000" />
 </kbd>
 
 Check "Evidence" folder with images and videos taken with the model running.
