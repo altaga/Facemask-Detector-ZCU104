@@ -157,7 +157,7 @@ https://github.com/Xilinx/Vitis-AI
 
 Abre el terminal de linux y escribe los siguientes comandos.
 
-En la carpeta Scripts ya les deje archivos .sh con los cuales podran instalar facilmente todos los archivos necesarios.
+En la carpeta Scripts ya les deje archivos .sh con los cuales podran instalar facilmente todos los archivos necesarios, estos archivos deben de estar en la carpeta de /home para que funcionen correctamente.
 
 1. Instalando docker (1 - 2 minutes) si ya tienes Docker pasa a Script 2.
 
@@ -167,11 +167,27 @@ En la carpeta Scripts ya les deje archivos .sh con los cuales podran instalar fa
 
         sudo bash install_vitis.sh
 
-3. Start CPU env.
+NOTA: instala solo uno de los siguientes ENV segun tu preferencia.
 
-        cd ./docker
+3. Instalando el environment CPU (20 - 30 minutes).
 
-        ./docker_build_cpu.sh
+        sudo bash install_cpu.sh 
+
+3. Instalando el environment GPU (20 - 30 minutes).
+
+        sudo bash install_gpu.sh
+        
+4. Start base Env.
+
+        sudo bash run_env.sh
+
+5. Start Vicis-AI-TensorFlow
+
+        conda activate vitis-ai-tensorflow
+
+<img src="https://i.postimg.cc/rmh0JF9z/image.png" width="1000">
+
+Si todo lo hiciste bien, deberias de ver una consola como esta.
 
 En el [Appendix A](#appendix-a) les dejo el contenido de los Scipts.
 
@@ -217,6 +233,8 @@ http://192.168.2.99
 
 User:xilinx
 Password:xilinx
+
+
 
 ## Test Pynq:
 
