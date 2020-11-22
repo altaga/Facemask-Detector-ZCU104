@@ -181,9 +181,13 @@ NOTA: instala solo uno de los siguientes ENV segun tu preferencia.
 
         sudo bash run_env.sh
 
-5. Start Vicis-AI-TensorFlow
+5. Start Vitis-AI-TensorFlow
 
         conda activate vitis-ai-tensorflow
+
+6. Run this command once (IMPORTANT).
+        yes | pip install matplotlib keras==2.2.5
+
 
 <img src="https://i.postimg.cc/rmh0JF9z/image.png" width="1000">
 
@@ -193,7 +197,31 @@ En el [Appendix A](#appendix-a) les dejo el contenido de los Scipts.
 
 ## Train the model:
 
+Para realizar el entrenamiento, en la carpeta Vitis-AI, tendras que pegar la carpeta facemask-dataset dentro de Facemask-Dataset y el archivo train_facemask_model.ipynb dentro del folder Setup Notebook.
 
+Justo como se ve en la imagen.
+
+<img src="https://i.postimg.cc/yNjXMKPC/image.png" width="1000">
+
+Ahora en la consola de comandos ejecutaremos el siguiente comando para abrir Jupyter Notebooks.
+
+    jupyter notebook --allow-root
+
+<img src="https://i.postimg.cc/WbVhVF1R/image.png" width="1000">
+
+Abre el navegador y pega la liga que te aparecio en el terminal y abre el archivo.
+
+<img src="https://i.postimg.cc/kg4MMxrH/image.png" width="1000">
+
+Una vez abierto el codigo en la pestaña de Kernel ejecuta todo como se muestra en la imagen.
+
+<img src="https://i.postimg.cc/GpdQshQ6/image.png" width="1000">
+
+Todo el codigo esta explicado a detalle, para profundizar en el porfavor revisarlo.
+
+Al final de la ejecucion si todo funciono bien deberemos de ver el siguiente resultado.
+
+<img src="https://i.postimg.cc/Xqxw6wF8/image.png" width="1000">
 
 ## Board Setup:
 
