@@ -331,6 +331,7 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
     - Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks/ZCU104%20-%20Train%20and%20Test
 
 <br />
+<kbd>
 
 | Board       | Model                           | Mode      | FPS |
 |  :--------: | :-----------------------------: | :-------: | :-: |
@@ -340,6 +341,7 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
 | Jetson Nano | TfLite                          | 5W        | 41  |
 | ZCU104      | Vitis AI <br /> Optimized Model | Standard  | 400 |
 
+</kbd>
 <br />
 
 <kbd>
