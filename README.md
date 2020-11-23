@@ -1,29 +1,28 @@
-# Facemask-Detector-ZCU104
+# **Facemask-Detector-ZCU104**
 
 <img src="https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png" width="500">
 
-# Facemask-Detector-ZCU104
+# **Facemask-Detector-ZCU104**
 
 FPGA-based system that monitors facemask use through artificial intelligence, thermometer and facemask dispenser.
 
 <img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000">
 
-# Table of contents
+# **Table of contents:**
 
 * [Introduction](#introduction)
+* [Problem](#problem)
 * [Solution](#solution)
 * [Materials](#materials)
 * [Connection Diagram](#connection-diagram)
-* [Laptop Test](#laptop-test)
-* [Summary and mini demos](#summary-and-mini-demos)
-* [Jetson Setup](#jetson-setup)
-* [The Final Product](#the-final-product)
+* [Project](#project)
+* [Final Product](#final-product)
 * [Commentary](#commentary)
 * [References](#references)
 
-# Introduction:
+# **Introduction:**
 
-El COVID-19 ha cambiado nuestro dia a dia y continúa haciéndolo. Muchos negocios y empresas han quebrado ya que al cerrar, no han podido ofrecer sus servicios a sus clientes, sin embargo algunos otros han optado por la reapertura de sus comercios a su vez tambien han abierto los institutos públicos como museos, bibliotecas, etc. Todos estos establecimientos han tomando sus medidas de precaucion, generando nuevas normativas, tales como obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento [1].
+El COVID-19 ha cambiado nuestro dia a dia y continúa haciéndolo. Muchos negocios y empresas han quebrado ya que al cerrar, no han podido ofrecer sus servicios a sus clientes, sin embargo algunos otros han optado por la reapertura de sus comercios a su vez tambien han abierto los institutos públicos como museos, bibliotecas, etc. Todos estos establecimientos han tomando sus medidas de precaucion, generando nuevas normativas, tales como obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento [1](#1).
 
 <img src="https://i.ibb.co/8xsD8DZ/image.png" width="1000">
 
@@ -31,29 +30,29 @@ Ante esta nueva normativa los negocios han tenido que generar un puesto de emple
 
 1. https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiX_NyUiqU0d44aUqMNK7LVrXMOQWMfqr0MUUo8TKrJLpObf91qRUcUaAjKbEALw_wcB
 
-# Problem:
+# **Problem:**
 
 Este puesto de trabajo genera un costo anual por trabajador de almenos $30,000 [1] y si ese empleado llegara a enfermarse de covid-19 por ley en estados unidos tendrian que pagarle almenos $511 al dia [2].
 
 Este costo por un empleado que realiza una tarea repetitiva es excesivo pero necesario, debido a que las soluciones actualmente creadas aun no son suficientes para sustituir este puesto.
 
-- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+- The Xovis all-in-one solution - https://www.xovis.com/en/products/detail/face-mask-detection/
     - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
 - SecurOS™ Face Mask Detection - https://issivs.com/facemask/
     - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
-- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
+- Leewayhertz - https://www.leewayhertz.com/face-mask-detection-system/
     - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
-- SecurOS™ Face Mask Detection - https://issivs.com/facemask/
-    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+
+La mayoria de los devices en el mercado estan solo detectando el uso del cubrebocas, sin embargo este proyecto busca genera una solucion completa para el control de accesos.
 
 1. https://www.ziprecruiter.com/Salaries/Retail-Security-Officer-Salary
 2. https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf
 
-# Solution:
+# **Solution:**
 
 <img src="IMAGEURL" width="1000">
 
-# Materials:
+# **Materials:**
 
 Hardware:
 - ZCU104.                                x1.
@@ -95,7 +94,7 @@ https://www.arduino.cc/en/Main/Software
 - Python:
 https://www.python.org/
 
-# Connection Diagram:
+# **Connection Diagram:**
 
 This is the connection diagram of the system:
 
@@ -105,13 +104,13 @@ ZCU104 Processing:
 
 <img src="https://i.ibb.co/mRRqgQN/New-Project-1.png" width="1000">
 
-# Project:
+# **Project:**
 
-## Model:
+## **Model:**
 
 Para poder resolver este problema de la deteccion del uso de cubre bocas es necesario realizar una CCN (convolutional neural network) la cual sea capaz de idetificar en una imagen de un rostro humano si esta usando un cubrebocas o no.
 
-##  Train Dataset:
+## ** Train Dataset:**
 
 Para entrenar una CCN como sabemos es necesario utilizar un gran numero de imaganes, las cuales le serviran a las convoluciones como ejemplos para poder filtrar correctamente las cacarteristicas de las imaganes y con eso poder dar un resultado.
 
@@ -136,7 +135,7 @@ La clasificacion que buscamos lograr con esta CNN es la siguiente.
 
 <img src="https://i.postimg.cc/rwGqVQzM/image.png">
 
-## Train Environment Setup:
+## **Train Environment Setup:**
 
 Para realizar el entrenamiento de la red neuronal correctamente es necesario utilizar el environment que nos ofrece Xilinx para AI adaptado a modelos enfocados para DPU el cual se ejecuta en Ubuntu 18.04.3.
 
@@ -194,7 +193,7 @@ Si todo lo hiciste bien, deberias de ver una consola como esta.
 
 En el [Appendix A](#appendix-a) les dejo el contenido de los Scipts.
 
-## Train the model:
+## **Train the model:**
 
 Para realizar el entrenamiento, copia todos los archivos dentro de la carpeta de repositorio "Setup Notebook and Dataset" a la capeta Vitis-AI para el correcto funcionamiento del codigo.
 
@@ -222,7 +221,11 @@ Al final de la ejecucion si todo funciono bien deberemos de ver el siguiente res
 
 <img src="https://i.postimg.cc/Xqxw6wF8/image.png" width="1000">
 
-## Board Setup:
+De este proceso obtendremos un archivo llamado "dpu_face_binary_classifier_0.elf".
+
+Este archivo tiene guardado el modelo que usaremos.
+
+## **Board Setup:**
 
 La configuracion de la board es muy sencilla, en primer lugar tendras que descargar el sistema operativo PYNQ.
 
@@ -259,58 +262,92 @@ Una vez termine el boot de la board, desde tu navegador entra a la siguiente dir
 http://192.168.2.99
 
 User:xilinx
+
 Password:xilinx
 
+## **Test Pynq:**
+
+Primero haremos una pequeña prueba para ver su el sistema operativo esta funcionando correctamente, vamos a setear el WiFi, esto ademas de indicarnos que instalamos correctamente el OS nos servira para descargar las librerias faltantes para nuestro proyecto.
+
+<img src="https://i.ibb.co/wWL7zb3/image.png" width="600">
+
+NOTA: Como indicamos en materiales necesitan una tarjeta usb wifi externa para hacer funcionar el internet.
+
+<img src="https://i.ibb.co/4mbGVmX/image.png" width="600">
+
+Si todo funciona bien obtendremos de la linea de ping la siguiente respuesta.
+
+<img src="https://i.ibb.co/ZTzbSdF/image.png" width="600">
+
+Ahora instalaremos las librerias flatantes para hacer funcionar el DPU en la ZCU104. Vamos a abrir una terminal de comandos como se muestra en la imagen.
+
+<img src="https://i.ibb.co/gj2NBS8/image.png" width="600">
+
+Desde la terminal tenemos que escribir el siguiente comando, puedes copiar y pegarlo todo a la vez.
+
+    git clone --recursive --shallow-submodules https://github.com/Xilinx/DPU-PYNQ \
+    && cd DPU-PYNQ/upgrade \
+    && make \
+    && pip3 install pynq-dpu \
+    && cd $PYNQ_JUPYTER_NOTEBOOKS \
+    && pynq get-notebooks pynq-dpu -p . 
+
+<img src="https://i.ibb.co/2NMqD34/image.png" width="600">
+
+Este proceso puede tomar algo de tiempo segun tu conexion a internet.
+
+## **Test Model:**
+
+Para testear el modelo tenemos que bajar la capeta de github a nuestra board con el siguiente comando.
+
+    git clone https://github.com/altaga/Facemask-Detector-ZCU104
+
+Si prefieres tambien puedes pasar solo los archivos de la carpeta "Test Notebook" y "Main Notebook" a la board.
+
+Dentro de la carpeta Test Notebook, entraremos al archivo "Facemask-ZCU104.ipynb".
 
 
-## Test Pynq:
+
+## **Comparison Benchmarks:**
 
 
 
-## Test Model:
+## **Creating the code for the final product:**
 
 
 
-## Comparison Benchmarks:
+## **Extra Hardware Development:**
 
 
 
-## Creating the code for the final product:
+### **Display:**
 
 
 
-## Extra Hardware Development:
+### **Temperature:**
 
 
 
-## Display:
+### **FaceMask Dispenser:**
 
 
 
-## Temperature:
+# **Final Product:**
 
 
 
-## FaceMask Dispenser:
-
-
-
-# The Final Product:
-
-
-
-## Epic DEMO:
+# **Epic DEMO:**
 
 Video: Click on the image
 [![Facemask](https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png)](PENDING)
 
 Sorry github does not allow embed videos.
 
-# Commentary:
+# **Commentary:**
 
 
 
-## References:
+## **References:**
 
 Links:
 
@@ -325,9 +362,9 @@ Links:
 (5) https://www.nhtsa.gov/risky-driving/speeding
 
 
-# APPENDIX A:
+# **APPENDIX A:**
 
-## install_docker.sh
+## **install_docker.sh**
 
     #!/bin/sh
     sudo apt-get remove docker docker-engine docker.io containerd runc -y
@@ -350,7 +387,7 @@ Links:
     sudo usermod -aG docker $USER
     docker run hello-world
 
-## install_vitis.sh
+## **install_vitis.sh**
 
     #!/bin/sh
     git clone --recurse-submodules https://github.com/Xilinx/Vitis-AI
@@ -358,21 +395,21 @@ Links:
     docker pull xilinx/vitis-ai:latest
     cd     
 
-## install_cpu.sh
+## **install_cpu.sh**
 
     #!/bin/sh
     cd Vitis-AI/docker
     sudo bash ./docker_build_cpu.sh
     cd   
 
-## install_gpu.sh
+## **install_gpu.sh**
 
     #!/bin/sh
     cd Vitis-AI/docker
     sudo bash ./docker_build_gpu.sh
     cd    
 
-## install_vitis.sh
+## **install_vitis.sh**
 
     #!/bin/sh
     cd Vitis-AI
