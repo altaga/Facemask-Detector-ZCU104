@@ -110,11 +110,11 @@ ZCU104 Processing:
 
 Para poder resolver este problema de la deteccion del uso de cubre bocas es necesario realizar una CCN (convolutional neural network) la cual sea capaz de idetificar en una imagen de un rostro humano si esta usando un cubrebocas o no.
 
-## ** Train Dataset:**
+<img src="https://i.ibb.co/vmDXmD5/image.png" width="1000">
 
 Para entrenar una CCN como sabemos es necesario utilizar un gran numero de imaganes, las cuales le serviran a las convoluciones como ejemplos para poder filtrar correctamente las cacarteristicas de las imaganes y con eso poder dar un resultado.
 
-<img src="https://i.ibb.co/vmDXmD5/image.png" width="1000">
+## **Train Dataset:**
 
 En esta caso como dataset utilice 1916 imaganes positivas y 1930 imaganes negativas.
 
@@ -351,34 +351,73 @@ https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebo
 
 ## **Extra Hardware Development:**
 
+Para realizar la medicion de la temperatura de las personas y el dispensador de Facemask realice el siguiente circuito con un ESP32.
 
+<kbd>
+<img src="https://i.ibb.co/GPxyQNC/Untitled-Sketch-bb.png" width="1000" />
+</kbd>
 
 ### **Display:**
 
+El display tiene la funcion de mostrar diferentes mensajes, segun el resultado de la lectura de la ZCU104 y el sensor de temperatura.
 
+Mientras no se este realizando una lectura, obtendremos el siguiente mensaje.
 
-### **Temperature:**
+<img src="https://i.ibb.co/QJzTX9N/Untitledg.png" width="300" />
 
+Si la persona no tiene un cubre bocas, mostraremos este mensaje.
 
+<img src="https://i.ibb.co/RQFsM7y/sam.png" width="300" />
+
+Si la persona trae cubrebocas pero su temperatura es muy alta.
+
+<img src="https://i.ibb.co/G3PzXqN/Dontpass.png" width="300" />
+
+Si la persona tiene su su cubrebocas y su temperatura es normal.
+
+<img src="https://i.ibb.co/LdFdJZ3/wel.png" width="300" />
+
+Aqui un ejemplo ya en la pantalla.
+
+<img src="GIF DE EJEMPLO" width="300" />
 
 ### **FaceMask Dispenser:**
 
+Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomotor, ofrecera uno al cliente para que el cliente pueda pasar a la etapa de medicion de la temperatura.
 
+<img src="GIF DE LA CAJA DANDO UNO" width="300" />
+
+### **Temperature:**
+
+Cuando la ZCU104 indique que la persona esta usando cubrebocas se le tomara la temperatura.
+
+En este caso tomaremos como temperatura de refrencia maxima la sugerida por la CDC [1] que es de 100.4 °F. En el caso de que la temperatura sea mayor a 100.4 °F no podremos dejar que la persona pase al establecimiento.
+
+<img src="GIF DE LA MEDICION" width="300" />
+
+1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 
 # **Final Product:**
 
-
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
+<img src="Fotos e imagenes" width="1000" />
 
 # **Epic DEMO:**
 
 Video: Click on the image
-[![Facemask](https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png)](PENDING)
+<!--[![Facemask](https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png)](PENDING)-->
 
 Sorry github does not allow embed videos.
 
 # **Commentary:**
 
-
+<img src="Inventate algo chulo" width="1000" />
 
 ## **References:**
 
