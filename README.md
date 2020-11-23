@@ -217,13 +217,15 @@ Una vez abierto el codigo en la pestaña de Kernel ejecuta todo como se muestra 
 
 Todo el codigo esta explicado a detalle, para profundizar en el porfavor revisarlo.
 
+https://github.com/altaga/Facemask-Detector-ZCU104/blob/main/Setup%20Notebook%20and%20Dataset/train_facemask_model.ipynb
+
 Al final de la ejecucion si todo funciono bien deberemos de ver el siguiente resultado.
 
 <img src="https://i.postimg.cc/Xqxw6wF8/image.png" width="1000">
 
 De este proceso obtendremos un archivo llamado "dpu_face_binary_classifier_0.elf".
 
-Este archivo tiene guardado el modelo que usaremos.
+Este archivo tiene guardado el modelo que usaremos mas adelante y que ya se los proprocione en la carpeta "Main Notebook".
 
 ## **Board Setup:**
 
@@ -319,11 +321,14 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
 - RPi4 with 4gb
     - Tensor Flow Lite Model.
     - Tensor Flow Lite Optimized Model.
+    - Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks/RPi%20-%20Train%20and%20Test
 - Jetson Nano 4gb
     - Tensor Flow Model MAX Consumption Mode.
     - Tensor Flow Model 5W Consumption Mode.
+    - Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks/Jetson%20-%20Train%20and%20Test
 - ZCU104
     - Vitis AI - Keras optimized Model.
+    - Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks/ZCU104%20-%20Train%20and%20Test
 
 <br />
 
@@ -341,7 +346,7 @@ Se realizaron test de las siguientes boards para comparar si esta siendo mejor e
 <img src="https://i.ibb.co/yWxNvS6/Final-Benchmark.png" width="1000" />
 </kbd>
 
-Para mas detalles entrar en la carpeta.
+Para mas detalles entrar en la carpeta, dentro de cada carpeta estan los codigos para entrenar y ejecutar el modelo ademas de evidencia en video y fotografica de como funciona en tiempo real.
 
 https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks
 
@@ -356,6 +361,8 @@ Para realizar la medicion de la temperatura de las personas y el dispensador de 
 <kbd>
 <img src="https://i.ibb.co/GPxyQNC/Untitled-Sketch-bb.png" width="1000" />
 </kbd>
+
+Todo el control de este device se hizo a travez de BLE, con el fin de utilizar la menor cantidad de bateria del dispositivo.
 
 ### **Display:**
 
@@ -423,15 +430,13 @@ Sorry github does not allow embed videos.
 
 Links:
 
-(1) https://medlineplus.gov/healthysleep.html
+(1) https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiX_NyUiqU0d44aUqMNK7LVrXMOQWMfqr0MUUo8TKrJLpObf91qRUcUaAjKbEALw_wcB
 
-(2) http://www.euro.who.int/__data/assets/pdf_file/0008/114101/E84683.pdf
+(2) https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf
 
-(3) https://dmv.ny.gov/press-release/press-release-03-09-2018
+(3) https://www.ziprecruiter.com/Salaries/Retail-Security-Officer-Salary
 
-(4) https://www.nhtsa.gov/risky-driving/drowsy-driving
-
-(5) https://www.nhtsa.gov/risky-driving/speeding
+(4) https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 
 
 # **APPENDIX A:**
