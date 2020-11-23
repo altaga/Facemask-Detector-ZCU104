@@ -408,7 +408,7 @@ Cuando la ZCU104 indique que la persona esta usando cubrebocas se le tomara la t
 
 Para realizar el calculo de la temperatura real del cuerpo se realizo una regresion lineal multivariable para obtener una ecuacion que nos relacionara la temperatura del dorso de la mano, con la temperatura real interna del cuerpo.
 
-<img src="https://render.githubusercontent.com/render/math?math=BodyTemp\ =\ 0.71429skin\ -\ 0.35714amb\ +\ 23.14286">
+<img src="https://i.ibb.co/QfcnHmJ/image.png" width="1000">
 
 En este caso tomaremos como temperatura de refrencia maxima la sugerida por la CDC [1] que es de 100.4 °F. En el caso de que la temperatura sea mayor a 100.4 °F no podremos dejar que la persona pase al establecimiento.
 
