@@ -368,6 +368,12 @@ Todo el control de este device se hizo a travez de BLE, con el fin de utilizar l
 
 El display tiene la funcion de mostrar diferentes mensajes, segun el resultado de la lectura de la ZCU104 y el sensor de temperatura.
 
+Pagina para convertir imagenes a imgenes desplegables en la pantalla:
+
+https://sparks.gogo.co.nz/pcd8554-bmp.html
+
+Descripcion:
+
 Mientras no se este realizando una lectura, obtendremos el siguiente mensaje.
 
 <img src="https://i.ibb.co/QJzTX9N/Untitledg.png" width="300" />
@@ -396,13 +402,20 @@ Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomot
 
 ### **Temperature:**
 
-Cuando la ZCU104 indique que la persona esta usando cubrebocas se le tomara la temperatura.
+Cuando la ZCU104 indique que la persona esta usando cubrebocas se le tomara la temperatura de la mano.
+
+<img src="https://i.stack.imgur.com/HK7op.gif" width="1000" />
+
+Para realizar el calculo de la temperatura real del cuerpo se realizo una regresion lineal multivariable para obtener una ecuacion que nos relacionara la temperatura del dorso de la mano, con la temperatura real interna del cuerpo.
+
+<img src="https://render.githubusercontent.com/render/math?math=BodyTemp\ =\ 0.71429skin\ -\ 0.35714amb\ +\ 23.14286">
 
 En este caso tomaremos como temperatura de refrencia maxima la sugerida por la CDC [1] que es de 100.4 °F. En el caso de que la temperatura sea mayor a 100.4 °F no podremos dejar que la persona pase al establecimiento.
 
 <img src="GIF DE LA MEDICION" width="300" />
 
 1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
+2. http://manuals.serverscheck.com/EST-Difference_between_core_and_skin_temperature.pdf
 
 # **Final Product:**
 

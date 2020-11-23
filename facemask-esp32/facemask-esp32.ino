@@ -12,11 +12,11 @@
 #define SERVICE_UUID        "91e8811b-184e-4f7f-bf3e-c834af88d46f"
 #define CHARACTERISTIC_UUID "7325577d-a662-4789-bc62-24dfb14e5759"
 
-#define PIN_RESET 27
-#define PIN_SCE   26
-#define PIN_DC    25
+#define PIN_RESET 14
+#define PIN_SCE   32
+#define PIN_DC    15
 #define PIN_SDIN  33
-#define PIN_SCLK  32
+#define PIN_SCLK  27
 
 #define LCD_C     LOW
 #define LCD_D     HIGH
@@ -71,6 +71,13 @@ class MyCallbacks: public BLECharacteristicCallbacks {
         Serial.println("Facemask ON");
         pCharacteristic->setValue("Hello From Dispenser 1");
         LcdBitmap(wel);
+        delay(10000);
+        LcdBitmap(main);
+      }
+            else if (temp == "2") {
+        Serial.println("Facemask ON");
+        pCharacteristic->setValue("Hello From Dispenser 1");
+        LcdBitmap(nope);
         delay(10000);
         LcdBitmap(main);
       }
