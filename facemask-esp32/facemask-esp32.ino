@@ -1,9 +1,11 @@
 #include "images.h"
-#include "Ultrasonic.h"
 #include <ESP32Servo.h>
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
+#include <Wire.h>
+#include <Adafruit_MLX90614.h>
+
 #define uS_TO_S_FACTOR 1000000 /* Conversion factor for micro seconds to seconds */
 #define TIME_TO_SLEEP 60 /* Time ESP32 will go to sleep (in seconds) */
 
@@ -26,9 +28,19 @@
 #define LCD_X     84
 #define LCD_Y     48
 
+
+Adafruit_MLX90614 mlx = Adafruit_MLX90614();
+
+float correlation(float amb, float skin) {
+  if (skin > 27 && skin < 36) {
+    float realTemp = 0.71429 * skin - 0.35714 * amb + 23.14286;
+    return realTemp;
+  }
+  return skin;
+}
+
 Servo myservo;
-Ultrasonic ultrasonic(19);
-int servoPin = 18;
+int servoPin = A0;
 bool deviceConnected = false;
 BLEServer* pServer = NULL;
 
@@ -55,12 +67,12 @@ class MyCallbacks: public BLECharacteristicCallbacks {
         pCharacteristic->setValue("Hello From Dispenser 1");
 
         LcdBitmap(sam);
-        for (int x = 179; x > 45; --x) {
+        for (int x = 0; x < 179; x++) {
           myservo.write(x);
           delay(20);
         }
         delay(10000);
-        for (int x = 45; x < 179; x++) {
+        for (int x = 175; x > 0; --x) {
           myservo.write(x);
           delay(20);
         }
@@ -70,16 +82,35 @@ class MyCallbacks: public BLECharacteristicCallbacks {
       else if (temp == "1") {
         Serial.println("Facemask ON");
         pCharacteristic->setValue("Hello From Dispenser 1");
-        LcdBitmap(wel);
-        delay(10000);
-        LcdBitmap(main);
-      }
-            else if (temp == "2") {
-        Serial.println("Facemask ON");
-        pCharacteristic->setValue("Hello From Dispenser 1");
-        LcdBitmap(nope);
-        delay(10000);
-        LcdBitmap(main);
+        int counter = 0;
+        float acc = 0;
+        bool flag = true;
+        while(flag){
+          float temp = correlation(mlx.readAmbientTempC(), mlx.readObjectTempC());
+          delay(400);
+          if (temp > 30)
+          {
+            temp = correlation(mlx.readAmbientTempC(), mlx.readObjectTempC());
+            acc += temp;
+            Serial.println(temp);
+            if (counter > 8) {
+              acc = acc / 10;
+              flag=false;
+            }
+            counter++;
+          }
+        }
+        Serial.println(acc);
+        if ((acc) < 38) {
+          LcdBitmap(wel);
+          delay(10000);
+          LcdBitmap(main);
+        }
+        else {
+          LcdBitmap(nope);
+          delay(10000);
+          LcdBitmap(main);
+        }
       }
       else {
         Serial.println("Main");
@@ -170,12 +201,13 @@ void setup(void)
   ESP32PWM::allocateTimer(3);
   myservo.setPeriodHertz(50);    // standard 50 hz servo
   myservo.attach(servoPin, 1000, 2000); // attaches the servo on pin 18 to the servo object
-  myservo.write(175);
+  myservo.write(0);
   LcdInitialise();
   LcdClear();
   gotoXY(0, 0);
   LcdBitmap(main);
   startBLE();
+  mlx.begin();
   digitalWrite(5, HIGH);
   Serial.println("BLE OK");
 
@@ -183,18 +215,5 @@ void setup(void)
 
 void loop(void)
 {
-  long RangeInCentimeters;
-  RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
-  if (RangeInCentimeters < 3) {
-    for (int x = 179; x > 45; --x) {
-      myservo.write(x);
-      delay(20);
-    }
-    delay(5000);
-    for (int x = 45; x < 179; x++) {
-      myservo.write(x);
-      delay(20);
-    }
-  }
   delay(100);
 }
