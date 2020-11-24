@@ -17,7 +17,7 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
 * [Connection Diagram](#connection-diagram)
 * [Project](#project)
 * [Final Product](#final-product)
-* [Commentary](#commentary)
+* [Commentary and Future Rollout](#commentary-and-future-rollout)
 * [References](#references)
 
 # **Introduction:**
@@ -443,11 +443,11 @@ Video: Click on the image
 
 Sorry github does not allow embed videos.
 
-# **Commentary:**
+# **Commentary and Future Rollout:**
 
 <img src="Inventate algo chulo" width="1000" />
 
-## **References:**
+# **References:**
 
 Links:
 
