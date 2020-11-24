@@ -406,6 +406,10 @@ Si la persona no tiene un cubre bocas, mostraremos este mensaje.
 
 <img src="https://i.ibb.co/RQFsM7y/sam.png" width="300" />
 
+Antes de tomar la temperatura se desplegara esta imagen para que el cliente acerque su mano al sensor.
+
+<img src="https://i.ibb.co/Ny5CR8N/temp.png" width="300" />
+
 Si la persona trae cubrebocas pero su temperatura es muy alta.
 
 <img src="https://i.ibb.co/G3PzXqN/Dontpass.png" width="300" />
