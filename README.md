@@ -392,7 +392,7 @@ Todo el control de este device se hizo a travez de BLE, con el fin de utilizar l
 
 El display tiene la funcion de mostrar diferentes mensajes, segun el resultado de la lectura de la ZCU104 y el sensor de temperatura.
 
-Pagina para convertir imagenes a imgenes desplegables en la pantalla:
+Pagina para convertir imagenes a imgenes desplegables en la pantalla, las imaganes tienen que ser hechas casi a mano como PIXELART para poder desplegarlas bien y que se vean bien:
 
 https://sparks.gogo.co.nz/pcd8554-bmp.html
 
