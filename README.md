@@ -413,7 +413,7 @@ En este caso tomaremos como temperatura de refrencia maxima la sugerida por la C
 1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 2. http://manuals.serverscheck.com/EST-Difference_between_core_and_skin_temperature.pdf
 
-## **Creating the code for the final product:**
+## **Final Code:**
 
 Ya en este momento tenemos un dispositivo BLE con el cual nos podemos comunicar de forma inalambrica. 
 
@@ -422,6 +422,8 @@ Una vez la ZCU104 obtenga almenos 3 leturas correctas, mandaremos la señal al E
 <img src="https://i.ibb.co/Kwy9v34/olovrgo-1.png" width="1000" />
 
 El codigo en la la carpeta "Main Notebook" realiza todo este proceso.
+
+Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Main%20Notebook
 
 # **Final Product:**
 
