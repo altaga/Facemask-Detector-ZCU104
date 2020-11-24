@@ -82,6 +82,7 @@ class MyCallbacks: public BLECharacteristicCallbacks {
       else if (temp == "1") {
         Serial.println("Facemask ON");
         pCharacteristic->setValue("Hello From Dispenser 1");
+        LcdBitmap(teMps);
         int counter = 0;
         float acc = 0;
         bool flag = true;
