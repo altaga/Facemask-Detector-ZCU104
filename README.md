@@ -19,19 +19,19 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
 - [**Materials:**](#materials)
 - [**Connection Diagram:**](#connection-diagram)
 - [**Project:**](#project)
-  - [**Model:**](#model)
-  - [**Training Dataset:**](#training-dataset)
-  - [**Train Environment Setup:**](#train-environment-setup)
-  - [**Train the model:**](#train-the-model)
-  - [**Board Setup:**](#board-setup)
-  - [**Test Pynq:**](#test-pynq)
-  - [**Test Model:**](#test-model)
-  - [**Comparison Benchmarks:**](#comparison-benchmarks)
+  - [**Model**](#model)
+  - [**Training Dataset**](#training-dataset)
+  - [**Train Environment Setup**](#train-environment-setup)
+  - [**Train the model**](#train-the-model)
+  - [**Board Setup**](#board-setup)
+  - [**Test Pynq**](#test-pynq)
+  - [**Test Model**](#test-model)
+  - [**Comparison Benchmarks**](#comparison-benchmarks)
   - [**Extra Hardware Development:**](#extra-hardware-development)
-    - [**Display:**](#display)
-    - [**FaceMask Dispenser:**](#facemask-dispenser)
-    - [**Temperature:**](#temperature)
-  - [**Final Code:**](#final-code)
+    - [**Display**](#display)
+    - [**FaceMask Dispenser**](#facemask-dispenser)
+    - [**Temperature**](#temperature)
+  - [**Final Code**](#final-code)
 - [**Final Product:**](#final-product)
 - [**Epic DEMO:**](#epic-demo)
 - [**Commentary and Future Rollout:**](#commentary-and-future-rollout)
@@ -124,7 +124,7 @@ ZCU104 Processing:
 
 # **Project:**
 
-## **Model:**
+## **Model**
 
 Para poder resolver este problema de la deteccion del uso de cubre bocas es necesario realizar una CCN (convolutional neural network) la cual sea capaz de idetificar en una imagen de un rostro humano si esta usando un cubrebocas o no.
 
@@ -132,7 +132,7 @@ Para poder resolver este problema de la deteccion del uso de cubre bocas es nece
 
 Para entrenar una CCN como sabemos es necesario utilizar un gran numero de imaganes, las cuales le serviran a las convoluciones como ejemplos para poder filtrar correctamente las cacarteristicas de las imaganes y con eso poder dar un resultado.
 
-## **Training Dataset:**
+## **Training Dataset**
 
 En esta caso como dataset utilice 1916 imaganes positivas y 1930 imaganes negativas.
 
@@ -153,7 +153,7 @@ La clasificacion que buscamos lograr con esta CNN es la siguiente.
 
 <img src="https://i.postimg.cc/rwGqVQzM/image.png" width="1000">
 
-## **Train Environment Setup:**
+## **Train Environment Setup**
 
 Para realizar el entrenamiento de la red neuronal correctamente es necesario utilizar el environment que nos ofrece Xilinx para AI adaptado a modelos enfocados para DPU el cual se ejecuta en Ubuntu 18.04.3.
 
@@ -211,7 +211,7 @@ Si todo lo hiciste bien, deberias de ver una consola como esta.
 
 En el [Appendix A](#appendix-a) les dejo el contenido de los Scipts.
 
-## **Train the model:**
+## **Train the model**
 
 Para realizar el entrenamiento, copia todos los archivos dentro de la carpeta de repositorio "Setup Notebook and Dataset" a la capeta Vitis-AI para el correcto funcionamiento del codigo.
 
@@ -245,7 +245,7 @@ De este proceso obtendremos un archivo llamado "dpu_face_binary_classifier_0.elf
 
 Este archivo tiene guardado el modelo que usaremos mas adelante y que ya se los proprocione en la carpeta "Main Notebook".
 
-## **Board Setup:**
+## **Board Setup**
 
 La configuracion de la board es muy sencilla, en primer lugar tendras que descargar el sistema operativo PYNQ.
 
@@ -285,7 +285,7 @@ User:xilinx
 
 Password:xilinx
 
-## **Test Pynq:**
+## **Test Pynq**
 
 Primero haremos una pequeña prueba para ver su el sistema operativo esta funcionando correctamente, vamos a setear el WiFi, esto ademas de indicarnos que instalamos correctamente el OS nos servira para descargar las librerias faltantes para nuestro proyecto.
 
@@ -316,7 +316,7 @@ Desde la terminal tenemos que escribir el siguiente comando, puedes copiar y peg
 
 Este proceso puede tomar algo de tiempo segun tu conexion a internet.
 
-## **Test Model:**
+## **Test Model**
 
 Para testear el modelo tenemos que bajar la capeta de github a nuestra board con el siguiente comando.
 
@@ -328,7 +328,7 @@ Dentro de la carpeta Test Notebook, entraremos al archivo "Facemask-ZCU104.ipynb
 
 <img src="https://i.ibb.co/ZLHmLq4/image.png" width="600">
 
-## **Comparison Benchmarks:**
+## **Comparison Benchmarks**
 
 Para este concurso crei importante demostrar la superioridad de las FPGA ante HW convencional y HW dedicado AI, al momento de realizar procesamiento en redes neuronales, asi que adapte el codigo de mi modelo para correr en 2 HW que cualquiera podria tener como desarrollador.
 
@@ -378,7 +378,7 @@ Para realizar la medicion de la temperatura de las personas y el dispensador de 
 
 Todo el control de este device se hizo a travez de BLE, con el fin de utilizar la menor cantidad de bateria del dispositivo.
 
-### **Display:**
+### **Display**
 
 El display tiene la funcion de mostrar diferentes mensajes, segun el resultado de la lectura de la ZCU104 y el sensor de temperatura.
 
@@ -408,13 +408,13 @@ Aqui un ejemplo ya en la pantalla.
 
 <img src="GIF DE EJEMPLO" width="300" />
 
-### **FaceMask Dispenser:**
+### **FaceMask Dispenser**
 
 Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomotor, ofrecera uno al cliente para que el cliente pueda pasar a la etapa de medicion de la temperatura.
 
 <img src="GIF DE LA CAJA DANDO UNO" width="300" />
 
-### **Temperature:**
+### **Temperature**
 
 Cuando la ZCU104 indique que la persona esta usando cubrebocas se le tomara la temperatura de la mano.
 
@@ -431,7 +431,7 @@ En este caso tomaremos como temperatura de refrencia maxima la sugerida por la C
 1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 2. http://manuals.serverscheck.com/EST-Difference_between_core_and_skin_temperature.pdf
 
-## **Final Code:**
+## **Final Code**
 
 Ya en este momento tenemos un dispositivo BLE con el cual nos podemos comunicar de forma inalambrica. 
 
