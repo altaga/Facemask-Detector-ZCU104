@@ -1,10 +1,10 @@
 # **Facemask-Detector-ZCU104**
 
+FPGA-based system that monitors facemask use through artificial intelligence, thermometer and facemask dispenser.
+
 <img src="https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png" width="500">
 
-# **Facemask-Detector-ZCU104**
-
-FPGA-based system that monitors facemask use through artificial intelligence, thermometer and facemask dispenser.
+# **Welcome**
 
 <img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000">
 
