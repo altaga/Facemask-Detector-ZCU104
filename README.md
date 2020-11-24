@@ -110,7 +110,7 @@ ZCU104 Processing:
 
 Para poder resolver este problema de la deteccion del uso de cubre bocas es necesario realizar una CCN (convolutional neural network) la cual sea capaz de idetificar en una imagen de un rostro humano si esta usando un cubrebocas o no.
 
-<img src="https://i.ibb.co/vmDXmD5/image.png" width="1000">
+<img src="https://i.ibb.co/WF6Q64G/image-2.png" width="1000">
 
 Para entrenar una CCN como sabemos es necesario utilizar un gran numero de imaganes, las cuales le serviran a las convoluciones como ejemplos para poder filtrar correctamente las cacarteristicas de las imaganes y con eso poder dar un resultado.
 
