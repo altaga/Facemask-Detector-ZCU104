@@ -348,13 +348,13 @@ Debido a que todos los codigos contienen desplegado de el resultado en pantalla,
 
 ### **Boards tested**
 
-- RPi4 with 4gb
+- RPi4 with 4gb:
     - Tensor Flow Lite Model.
     - Tensor Flow Lite Optimized Model.
-- Jetson Nano 4gb
+- Jetson Nano 4gb:
     - Tensor Flow Model MAX Consumption Mode.
     - Tensor Flow Model 5W Consumption Mode.
-- ZCU104
+- ZCU104:
     - Vitis AI - Keras optimized Model.
 
 ### **Benchmark table**
