@@ -8,16 +8,16 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
 
 <img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000">
 
-# **Table of contents:**
+# **Table of contents**
 
 - [**Facemask-Detector-ZCU104**](#facemask-detector-zcu104)
 - [**Welcome**](#welcome)
-- [**Table of contents:**](#table-of-contents)
-- [**Introduction:**](#introduction)
-- [**Problem:**](#problem)
-- [**Solution:**](#solution)
-- [**Materials:**](#materials)
-- [**Connection Diagram:**](#connection-diagram)
+- [**Table of contents**](#table-of-contents)
+- [**Introduction**](#introduction)
+- [**Problem**](#problem)
+- [**Solution**](#solution)
+- [**Materials**](#materials)
+- [**Connection Diagram**](#connection-diagram)
 - [**Project:**](#project)
   - [**Model**](#model)
   - [**Training Dataset**](#training-dataset)
@@ -32,13 +32,13 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
     - [**FaceMask Dispenser**](#facemask-dispenser)
     - [**Temperature**](#temperature)
   - [**Final Code**](#final-code)
-- [**Final Product:**](#final-product)
-- [**Epic DEMO:**](#epic-demo)
-- [**Commentary and Future Rollout:**](#commentary-and-future-rollout)
-- [**References:**](#references)
-- [**APPENDIX A:**](#appendix-a)
+- [**Final Product**](#final-product)
+- [**Epic DEMO**](#epic-demo)
+- [**Commentary and Future Rollout**](#commentary-and-future-rollout)
+- [**References**](#references)
+- [**APPENDIX A**](#appendix-a)
 
-# **Introduction:**
+# **Introduction**
 
 El COVID-19 ha cambiado nuestro dia a dia y continúa haciéndolo. Muchos negocios y empresas han quebrado ya que al cerrar, no han podido ofrecer sus servicios a sus clientes, sin embargo algunos otros han optado por la reapertura de sus comercios a su vez tambien han abierto los institutos públicos como museos, bibliotecas, etc. Todos estos establecimientos han tomando sus medidas de precaucion, generando nuevas normativas, tales como obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento [1](#1).
 
@@ -48,7 +48,7 @@ Ante esta nueva normativa los negocios han tenido que generar un puesto de emple
 
 1. https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiX_NyUiqU0d44aUqMNK7LVrXMOQWMfqr0MUUo8TKrJLpObf91qRUcUaAjKbEALw_wcB
 
-# **Problem:**
+# **Problem**
 
 Este puesto de trabajo genera un costo anual por trabajador de almenos $30,000 [1] y si ese empleado llegara a enfermarse de covid-19 por ley en estados unidos tendrian que pagarle almenos $511 al dia [2].
 
@@ -66,11 +66,11 @@ La mayoria de los devices en el mercado estan solo detectando el uso del cubrebo
 1. https://www.ziprecruiter.com/Salaries/Retail-Security-Officer-Salary
 2. https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf
 
-# **Solution:**
+# **Solution**
 
 <img src="IMAGEURL" width="1000">
 
-# **Materials:**
+# **Materials**
 
 Hardware:
 - ZCU104.                                x1.
@@ -112,7 +112,7 @@ https://www.arduino.cc/en/Main/Software
 - Python:
 https://www.python.org/
 
-# **Connection Diagram:**
+# **Connection Diagram**
 
 This is the connection diagram of the system:
 
@@ -443,7 +443,7 @@ El codigo en la la carpeta "Main Notebook" realiza todo este proceso.
 
 Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Main%20Notebook
 
-# **Final Product:**
+# **Final Product**
 
 <img src="Fotos e imagenes" width="1000" />
 <img src="Fotos e imagenes" width="1000" />
@@ -454,18 +454,18 @@ Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Main%20Notebo
 <img src="Fotos e imagenes" width="1000" />
 <img src="Fotos e imagenes" width="1000" />
 
-# **Epic DEMO:**
+# **Epic DEMO**
 
 Video: Click on the image
 <!--[![Facemask](https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png)](PENDING)-->
 
 Sorry github does not allow embed videos.
 
-# **Commentary and Future Rollout:**
+# **Commentary and Future Rollout**
 
 <img src="Inventate algo chulo" width="1000" />
 
-# **References:**
+# **References**
 
 Links:
 
@@ -478,7 +478,7 @@ Links:
 (4) https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 
 
-# **APPENDIX A:**
+# **APPENDIX A**
 
 **install_docker.sh**
 
