@@ -27,10 +27,10 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
   - [**Test Pynq**](#test-pynq)
   - [**Test Model**](#test-model)
   - [**Comparison Benchmarks:**](#comparison-benchmarks)
-    - [**Algorithm**:](#algorithm)
-    - [**Boards tested**:](#boards-tested)
-    - [**Benchmark table**:](#benchmark-table)
-    - [**Comparison chart**:](#comparison-chart)
+    - [**Algorithm**](#algorithm)
+    - [**Boards tested**](#boards-tested)
+    - [**Benchmark table**](#benchmark-table)
+    - [**Comparison chart**](#comparison-chart)
   - [**Extra Hardware Development:**](#extra-hardware-development)
     - [**Display**](#display)
     - [**FaceMask Dispenser**](#facemask-dispenser)
@@ -340,13 +340,13 @@ Al correr todo vemos una imagen como esta, significa que todo ha funcionado corr
 
 Para este concurso crei importante demostrar la superioridad de las FPGA ante HW convencional y HW dedicado AI, al momento de realizar procesamiento en redes neuronales, asi que adapte el codigo de mi modelo para correr en 2 HW que cualquiera podria tener como desarrollador.
 
-### **Algorithm**:
+### **Algorithm**
 
 Debido a que todos los codigos contienen desplegado de el resultado en pantalla, lo cual quita mucho tiempo, el calculo de los FPS se realizo con el siguiente algoritmo.
 
 ![FPS](https://i.ibb.co/qkTRsj7/FPS.png)
 
-### **Boards tested**:
+### **Boards tested**
 
 - RPi4 with 4gb
     - Tensor Flow Lite Model.
@@ -357,7 +357,7 @@ Debido a que todos los codigos contienen desplegado de el resultado en pantalla,
 - ZCU104
     - Vitis AI - Keras optimized Model.
 
-### **Benchmark table**:
+### **Benchmark table**
 
 | Board       | Model                    | Mode      | FPS |
 |  :--------: | :----------------------: | :-------: | :-: |
@@ -367,7 +367,7 @@ Debido a que todos los codigos contienen desplegado de el resultado en pantalla,
 | Jetson Nano | TfLite                   | 5W        | 41  |
 | ZCU104      | Vitis AI <br /> Optimized Model | Standard  | 400 |
 
-### **Comparison chart**:
+### **Comparison chart**
 
 <br />
 <kbd>
