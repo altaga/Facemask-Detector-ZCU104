@@ -350,10 +350,6 @@ Para mas detalles entrar en la carpeta, dentro de cada carpeta estan los codigos
 
 https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks
 
-## **Creating the code for the final product:**
-
-
-
 ## **Extra Hardware Development:**
 
 Para realizar la medicion de la temperatura de las personas y el dispensador de Facemask realice el siguiente circuito con un ESP32.
@@ -416,6 +412,16 @@ En este caso tomaremos como temperatura de refrencia maxima la sugerida por la C
 
 1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 2. http://manuals.serverscheck.com/EST-Difference_between_core_and_skin_temperature.pdf
+
+## **Creating the code for the final product:**
+
+Ya en este momento tenemos un dispositivo BLE con el cual nos podemos comunicar de forma inalambrica. 
+
+Una vez la ZCU104 obtenga almenos 3 leturas correctas, mandaremos la señal al ESP32 que pase a la fase de toma de temperatura, una vez el cliente pase esta fase, se le permitira la entrada al establecimiento.
+
+<img src="https://i.ibb.co/Kwy9v34/olovrgo-1.png" width="300" />
+
+El codigo en la la carpeta "Main Notebook" realiza todo este proceso.
 
 # **Final Product:**
 
