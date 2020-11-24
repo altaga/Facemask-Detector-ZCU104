@@ -10,15 +10,33 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
 
 # **Table of contents:**
 
-* [Introduction](#introduction)
-* [Problem](#problem)
-* [Solution](#solution)
-* [Materials](#materials)
-* [Connection Diagram](#connection-diagram)
-* [Project](#project)
-* [Final Product](#final-product)
-* [Commentary and Future Rollout](#commentary-and-future-rollout)
-* [References](#references)
+- [**Facemask-Detector-ZCU104**](#facemask-detector-zcu104)
+- [**Welcome**](#welcome)
+- [**Table of contents:**](#table-of-contents)
+- [**Introduction:**](#introduction)
+- [**Problem:**](#problem)
+- [**Solution:**](#solution)
+- [**Materials:**](#materials)
+- [**Connection Diagram:**](#connection-diagram)
+- [**Project:**](#project)
+  - [**Model:**](#model)
+  - [**Training Dataset:**](#training-dataset)
+  - [**Train Environment Setup:**](#train-environment-setup)
+  - [**Train the model:**](#train-the-model)
+  - [**Board Setup:**](#board-setup)
+  - [**Test Pynq:**](#test-pynq)
+  - [**Test Model:**](#test-model)
+  - [**Comparison Benchmarks:**](#comparison-benchmarks)
+  - [**Extra Hardware Development:**](#extra-hardware-development)
+    - [**Display:**](#display)
+    - [**FaceMask Dispenser:**](#facemask-dispenser)
+    - [**Temperature:**](#temperature)
+  - [**Final Code:**](#final-code)
+- [**Final Product:**](#final-product)
+- [**Epic DEMO:**](#epic-demo)
+- [**Commentary and Future Rollout:**](#commentary-and-future-rollout)
+- [**References:**](#references)
+- [**APPENDIX A:**](#appendix-a)
 
 # **Introduction:**
 
@@ -114,7 +132,7 @@ Para poder resolver este problema de la deteccion del uso de cubre bocas es nece
 
 Para entrenar una CCN como sabemos es necesario utilizar un gran numero de imaganes, las cuales le serviran a las convoluciones como ejemplos para poder filtrar correctamente las cacarteristicas de las imaganes y con eso poder dar un resultado.
 
-## **Train Dataset:**
+## **Training Dataset:**
 
 En esta caso como dataset utilice 1916 imaganes positivas y 1930 imaganes negativas.
 
@@ -462,7 +480,7 @@ Links:
 
 # **APPENDIX A:**
 
-## **install_docker.sh**
+**install_docker.sh**
 
     #!/bin/sh
     sudo apt-get remove docker docker-engine docker.io containerd runc -y
@@ -485,7 +503,7 @@ Links:
     sudo usermod -aG docker $USER
     docker run hello-world
 
-## **install_vitis.sh**
+**install_vitis.sh**
 
     #!/bin/sh
     git clone --recurse-submodules https://github.com/Xilinx/Vitis-AI
@@ -493,21 +511,21 @@ Links:
     docker pull xilinx/vitis-ai:latest
     cd     
 
-## **install_cpu.sh**
+**install_cpu.sh**
 
     #!/bin/sh
     cd Vitis-AI/docker
     sudo bash ./docker_build_cpu.sh
     cd   
 
-## **install_gpu.sh**
+**install_gpu.sh**
 
     #!/bin/sh
     cd Vitis-AI/docker
     sudo bash ./docker_build_gpu.sh
     cd    
 
-## **install_vitis.sh**
+**install_vitis.sh**
 
     #!/bin/sh
     cd Vitis-AI

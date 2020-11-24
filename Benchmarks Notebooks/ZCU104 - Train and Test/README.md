@@ -1,5 +1,7 @@
 # ZCU104
 
+NOTA: AQUI NO HAY CARPETA DE TRAIN NI TEST YA QUE ESAS ESTAN EN LA CARPETA PRINCIPAL.
+
 Toda la informacion de la ZCU104 estara en este link:
 
 https://www.xilinx.com/products/boards-and-kits/zcu104.html
