@@ -259,7 +259,7 @@ Una vez tengas este sistema operativo flash, el sistema operativo con algun prog
 
 https://www.balena.io/etcher/
 
-<img src="https://i.ibb.co/VjR44R3/image.png" width="600">
+<img src="https://i.ibb.co/VjR44R3/image.png" width="1000">
 
 Ahora antes de conectar la SD en la Board, conectarla y encederla. Revisa los switches arriba de la board que esten en la siguiente posicion. Esto habilitara el boot desde SD.
 
@@ -293,19 +293,19 @@ Password:xilinx
 
 Primero haremos una pequeña prueba para ver su el sistema operativo esta funcionando correctamente, vamos a setear el WiFi, esto ademas de indicarnos que instalamos correctamente el OS nos servira para descargar las librerias faltantes para nuestro proyecto.
 
-<img src="https://i.ibb.co/wWL7zb3/image.png" width="600">
+<img src="https://i.ibb.co/wWL7zb3/image.png" width="1000">
 
 NOTA: Como indicamos en materiales necesitan una tarjeta usb wifi externa para hacer funcionar el internet.
 
-<img src="https://i.ibb.co/4mbGVmX/image.png" width="600">
+<img src="https://i.ibb.co/4mbGVmX/image.png" width="1000">
 
 Si todo funciona bien obtendremos de la linea de ping la siguiente respuesta.
 
-<img src="https://i.ibb.co/ZTzbSdF/image.png" width="600">
+<img src="https://i.ibb.co/ZTzbSdF/image.png" width="1000">
 
 Ahora instalaremos las librerias flatantes para hacer funcionar el DPU en la ZCU104. Vamos a abrir una terminal de comandos como se muestra en la imagen.
 
-<img src="https://i.ibb.co/gj2NBS8/image.png" width="600">
+<img src="https://i.ibb.co/gj2NBS8/image.png" width="1000">
 
 Desde la terminal tenemos que escribir el siguiente comando, puedes copiar y pegarlo todo a la vez.
 
@@ -316,7 +316,7 @@ Desde la terminal tenemos que escribir el siguiente comando, puedes copiar y peg
     && cd $PYNQ_JUPYTER_NOTEBOOKS \
     && pynq get-notebooks pynq-dpu -p . 
 
-<img src="https://i.ibb.co/2NMqD34/image.png" width="600">
+<img src="https://i.ibb.co/2NMqD34/image.png" width="1000">
 
 Este proceso puede tomar algo de tiempo segun tu conexion a internet.
 
