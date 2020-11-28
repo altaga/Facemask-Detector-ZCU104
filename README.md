@@ -35,6 +35,9 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
     - [**Display**](#display)
     - [**FaceMask Dispenser**](#facemask-dispenser)
     - [**Temperature**](#temperature)
+  - [**Extra Software Development**](#extra-software-development)
+    - [**App installed from APK**:](#app-installed-from-apk)
+    - [**Screenshots and App running**:](#screenshots-and-app-running)
   - [**Final Code**](#final-code)
 - [**Final Product**](#final-product)
 - [**Epic DEMO**](#epic-demo)
@@ -444,6 +447,37 @@ En este caso tomaremos como temperatura de refrencia maxima la sugerida por la C
 
 1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 2. http://manuals.serverscheck.com/EST-Difference_between_core_and_skin_temperature.pdf
+
+## **Extra Software Development**
+
+A su vez que tenemos un dispositivo que es autonomo en su tarea, debemos de tener una forma de visualizar lo que esta viendo el dispositivo de manera remota, asi que se creo una sencilla aplicacion basada en el framework de React Native para esta tarea.
+
+Features:
+- Comunicacion basada en MQTT.
+- Capacidad de guardar imaganes con un boton.
+- Capacidad de visualizar la IP y puerto del servidor.
+- Capacidad de poder cambiar entre dispositivos en el caso de que el establecimiento tenga multiples entradas.
+- Plug and Play.
+
+### **App installed from APK**:
+<img src="https://i.ibb.co/Pr908P0/Screenshot-20201128-014246-com.png" height="500" />
+
+(Smartphone: Huawei Y6P).
+
+### **Screenshots and App running**:
+<img src="https://i.ibb.co/C7s00Qg/20201128-014028.jpg" height="350" />
+<img src="https://i.ibb.co/qrzYvbv/Screenshot-20201128-014000-com-monitormqtt.jpg" height="350" />
+<img src="https://i.ibb.co/jR7wbH4/image1606549108735.jpg" height="350" />
+
+(Smartphone: Huawei Y6P).
+
+Puede instalar la APK la cual esta en la carpeta "MonitorMqtt-APK" o construirla usted mismo, todo el codigo fuente de la app esta en la carpeta "MonitorMqtt", recuerde que utilizamos el framework React Native.
+
+Si tu celular tiene habilitado el modo USB debugger, puedes instalar la app desde tu pc con el siguiente comando estando en la capeta "MonitorMqtt-APK".
+
+    adb install App.apk
+
+<img src="https://i.ibb.co/VNn3hQC/ezgif-com-gif-maker.gif" height="500" />
 
 ## **Final Code**
 
