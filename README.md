@@ -459,6 +459,8 @@ Features:
 - Capacidad de poder cambiar entre dispositivos en el caso de que el establecimiento tenga multiples entradas.
 - Plug and Play.
 
+<img src="https://i.ibb.co/2NJGfTJ/Icon.png" height="500" />
+
 ### **App installed from APK**:
 <img src="https://i.ibb.co/Pr908P0/Screenshot-20201128-014246-com.png" height="500" />
 
