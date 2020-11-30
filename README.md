@@ -467,7 +467,7 @@ Features:
 (Smartphone: Huawei Y6P).
 
 ### **Screenshots and App running**:
-<img src="https://i.ibb.co/C7s00Qg/20201128-014028.jpg" height="350" /><img src="https://i.ibb.co/qrzYvbv/Screenshot-20201128-014000-com-monitormqtt.jpg" height="350" /><img src="https://i.ibb.co/jR7wbH4/image1606549108735.jpg" height="350" />
+<img src="https://i.ibb.co/C7s00Qg/20201128-014028.jpg" height="400" /><img src="https://i.ibb.co/qrzYvbv/Screenshot-20201128-014000-com-monitormqtt.jpg" height="400" /><img src="https://i.ibb.co/jR7wbH4/image1606549108735.jpg" height="400" />
 
 (Smartphone: Huawei Y6P).
 
