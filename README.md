@@ -485,7 +485,7 @@ Ya en este momento tenemos un dispositivo BLE con el cual nos podemos comunicar 
 
 Una vez la ZCU104 obtenga almenos 3 leturas correctas, mandaremos la señal al ESP32 que pase a la fase de toma de temperatura, una vez el cliente pase esta fase, se le permitira la entrada al establecimiento.
 
-<img src="https://i.ibb.co/qCzPsM1/olovrgo.png" width="1000" />
+<img src="https://i.ibb.co/r3g16Gy/olovrgo.png" width="1000" />
 
 El codigo en la la carpeta "Main Notebook" realiza todo este proceso.
 
