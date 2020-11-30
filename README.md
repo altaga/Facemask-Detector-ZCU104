@@ -123,7 +123,7 @@ https://www.python.org/
 
 This is the connection diagram of the system:
 
-<img src="https://i.ibb.co/QYms7S3/New-Project.png" width="1000">
+<img src="https://i.ibb.co/rf3QWPv/New-Project-1.png" width="1000">
 
 ZCU104 Processing:
 
@@ -182,23 +182,27 @@ Abre el terminal de linux y escribe los siguientes comandos.
 
 En la carpeta Scripts ya les deje archivos .sh con los cuales podran instalar facilmente todos los archivos necesarios, estos archivos deben de estar en la carpeta de /home para que funcionen correctamente.
 
-1. Instalando docker (1 - 2 minutes) si ya tienes Docker pasa a Script 2.
+1. Install Docker (1 - 2 minutes) if you already have Docker go to Script 2.
 
         sudo bash install_docker.sh
 
-2. Instalando el environment (10 - 20 minutes).
+2. Install the Vitis (10 - 20 minutes).
 
         sudo bash install_vitis.sh
 
 NOTA: instala solo uno de los siguientes ENV segun tu preferencia.
 
-3. Instalando el environment CPU (20 - 30 minutes).
+3. Install CPU or GPU Support.
 
-        sudo bash install_cpu.sh 
+   - Instalando CPU (20 - 30 minutes).
 
-3. Instalando el environment GPU (20 - 30 minutes).
+           sudo bash install_cpu.sh 
 
-        sudo bash install_gpu.sh
+   OR
+
+   - Instalando el environment GPU (20 - 30 minutes).
+
+           sudo bash install_gpu.sh
         
 4. Start base Env.
 
