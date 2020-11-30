@@ -477,7 +477,7 @@ Si tu celular tiene habilitado el modo USB debugger, puedes instalar la app desd
 
     adb install App.apk
 
-<img src="https://i.ibb.co/mFmYKLh/ezgif-com-gif-maker-1.gif" height="500" />
+<img src="https://i.ibb.co/0qkzYYh/ezgif-com-gif-maker-2.gif" height="500" />
 
 ## **Final Code**
 
