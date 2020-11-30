@@ -477,7 +477,7 @@ Si tu celular tiene habilitado el modo USB debugger, puedes instalar la app desd
 
     adb install App.apk
 
-<img src="https://i.ibb.co/VNn3hQC/ezgif-com-gif-maker.gif" height="500" />
+<img src="https://i.ibb.co/mFmYKLh/ezgif-com-gif-maker-1.gif" height="500" />
 
 ## **Final Code**
 
@@ -485,7 +485,7 @@ Ya en este momento tenemos un dispositivo BLE con el cual nos podemos comunicar 
 
 Una vez la ZCU104 obtenga almenos 3 leturas correctas, mandaremos la señal al ESP32 que pase a la fase de toma de temperatura, una vez el cliente pase esta fase, se le permitira la entrada al establecimiento.
 
-<img src="https://i.ibb.co/Kwy9v34/olovrgo-1.png" width="1000" />
+<img src="https://i.ibb.co/qCzPsM1/olovrgo.png" width="1000" />
 
 El codigo en la la carpeta "Main Notebook" realiza todo este proceso.
 
