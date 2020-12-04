@@ -16,7 +16,9 @@ console.log(deviceHeight * .84)
 
 let base = "data:image/png;base64,"
 
-
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 class Components extends Component {
   constructor(props) {
@@ -31,6 +33,7 @@ class Components extends Component {
       ipDisplay:"NO SERVER!"
     }
     this.sub=""
+    this.randint = 'monitor'+getRandomInt(0,10000000000).toString()
   }
 
   saveInMemory(image) {
@@ -89,7 +92,7 @@ class Components extends Component {
     this.sub.disconnect()
     MQTT.removeClient({
       uri: 'ws://' + this.state.ipAdresss + ':1883',
-      clientId: 'monitor',
+      clientId: this.randint,
       automaticReconnect:true,
       keepalive:60,
       clean:true
@@ -104,7 +107,7 @@ class Components extends Component {
     NetworkInfo.getIPAddress().then(ipAddress => {
       MQTT.removeClient({
         uri: 'ws://' + ipAddress + ':1883',
-        clientId: 'monitor',
+        clientId: _this.randint,
         automaticReconnect:true,
         keepalive:60,
         clean:true

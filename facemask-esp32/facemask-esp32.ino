@@ -71,7 +71,7 @@ class MyCallbacks: public BLECharacteristicCallbacks {
           myservo.write(x);
           delay(20);
         }
-        delay(10000);
+        delay(8000);
         for (int x = 175; x > 0; --x) {
           myservo.write(x);
           delay(20);
