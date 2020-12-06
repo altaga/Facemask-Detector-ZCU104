@@ -449,9 +449,13 @@ Para realizar el calculo de la temperatura real del cuerpo se realizo una regres
 
 <img src="https://i.ibb.co/Rgm108g/image.png" width="1000">
 
+------------------------------------------------------------------------------
+
+<img src="https://i.ibb.co/qppjkm3/ezgif-com-gif-maker-6.gif" width="1000">
+
 En este caso tomaremos como temperatura de refrencia maxima la sugerida por la CDC [1] que es de 100.4 °F. En el caso de que la temperatura sea mayor a 100.4 °F no podremos dejar que la persona pase al establecimiento.
 
-<img src="GIF DE LA MEDICION" width="300" />
+<img src="https://i.ibb.co/D1TrFgx/ezgif-com-gif-maker-7.gif" width="1000" />
 
 1. https://www.cdc.gov/coronavirus/2019-ncov/downloads/COVID-19_CAREKit_ENG.pdf
 2. http://manuals.serverscheck.com/EST-Difference_between_core_and_skin_temperature.pdf
