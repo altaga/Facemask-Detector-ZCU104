@@ -75,7 +75,7 @@ La mayoria de los devices en el mercado estan solo detectando el uso del cubrebo
 
 # **Solution**
 
-<img src="https://i.ibb.co/vvD8Xmx/20201205-164641-2-1.png" width="600">
+<img src="https://i.ibb.co/M555tB7/20201205-164641-2-4.png" width="600">
 
 # **Materials**
 
@@ -507,14 +507,21 @@ Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Main%20Notebo
 
 # **Final Product**
 
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
-<img src="Fotos e imagenes" width="1000" />
+ZCU104:
+
+<img src="https://i.ibb.co/txzbkKK/20201205-164726-2.jpg" width="1000" />
+
+Face Mask Dispenser:
+
+<img src="https://i.ibb.co/0GFGhHx/20201205-164709-2.jpg" width="1000" />
+
+Display:
+
+<img src="https://i.ibb.co/DbxVXnh/Display.png" width="1000" />
+
+Complete solution working in local business
+
+<img src="https://i.ibb.co/Vm4mK5r/20201205-164641-2.jpg" width="1000" />
 
 # **Epic DEMO**
 
