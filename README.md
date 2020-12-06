@@ -213,10 +213,10 @@ NOTA: instala solo uno de los siguientes ENV segun tu preferencia.
         conda activate vitis-ai-tensorflow
 
 6. Run this command once (IMPORTANT).
+        
         yes | pip install matplotlib keras==2.2.5
 
-
-<img src="https://i.postimg.cc/rmh0JF9z/image.png" width="1000">
+<img src="https://i.ibb.co/yQ4qtXJ/image.png" width="1000">
 
 Si todo lo hiciste bien, deberias de ver una consola como esta.
 
@@ -228,21 +228,21 @@ Para realizar el entrenamiento, copia todos los archivos dentro de la carpeta de
 
 Justo como se ve en la imagen.
 
-<img src="https://i.postimg.cc/yNjXMKPC/image.png" width="1000">
+<img src="https://i.ibb.co/zFyKSDM/image.png" width="1000">
 
 Ahora en la consola de comandos ejecutaremos el siguiente comando para abrir Jupyter Notebooks.
 
     jupyter notebook --allow-root
 
-<img src="https://i.postimg.cc/WbVhVF1R/image.png" width="1000">
+<img src="https://i.ibb.co/9n01Vhn/image.png" width="1000">
 
 Abre el navegador y pega la liga que te aparecio en el terminal y abre el archivo.
 
-<img src="https://i.postimg.cc/kg4MMxrH/image.png" width="1000">
+<img src="https://i.ibb.co/Zd4ZLsQ/image.png" width="1000">
 
 Una vez abierto el codigo en la pestaña de Kernel ejecuta todo como se muestra en la imagen.
 
-<img src="https://i.postimg.cc/GpdQshQ6/image.png" width="1000">
+<img src="https://i.ibb.co/5K1xhmF/image.png" width="1000">
 
 Todo el codigo esta explicado a detalle, para profundizar en el porfavor revisarlo.
 
@@ -250,7 +250,7 @@ https://github.com/altaga/Facemask-Detector-ZCU104/blob/main/Setup%20Notebook%20
 
 Al final de la ejecucion si todo funciono bien deberemos de ver el siguiente resultado.
 
-<img src="https://i.postimg.cc/Xqxw6wF8/image.png" width="1000">
+<img src="https://i.ibb.co/RvhDfpD/image.png" width="1000">
 
 De este proceso obtendremos un archivo llamado "dpu_face_binary_classifier_0.elf".
 
