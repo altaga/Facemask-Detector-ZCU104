@@ -158,7 +158,7 @@ Te invito a revisar el dataset para comprobar las imaganes por ti mismo, la estr
 
 La clasificacion que buscamos lograr con esta CNN es la siguiente.
 
-<img src="https://i.postimg.cc/rwGqVQzM/image.png" width="1000">
+<img src="https://i.ibb.co/Sc74RBS/image.png" width="1000">
 
 ## **Train Environment Setup**
 
