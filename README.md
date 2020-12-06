@@ -431,7 +431,13 @@ Aqui un ejemplo ya en la pantalla.
 
 Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomotor, ofrecera uno al cliente para que el cliente pueda pasar a la etapa de medicion de la temperatura.
 
-<img src="GIF DE LA CAJA DANDO UNO" width="300" />
+------------------------------------------------------------------------------
+
+<img src="https://i.ibb.co/FBC2VcQ/ezgif-com-gif-maker-3.gif" width="1000" />
+
+------------------------------------------------------------------------------
+
+<img src="https://i.ibb.co/FBC2VcQ/ezgif-com-gif-maker-3.gif" width="1000" />
 
 ### **Temperature**
 
