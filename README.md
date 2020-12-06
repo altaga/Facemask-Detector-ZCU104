@@ -292,8 +292,6 @@ Una vez termine el boot de la board, desde tu navegador entra a la siguiente dir
 
 http://192.168.2.99
 
-User:xilinx
-
 Password:xilinx
 
 ## **Test Pynq**
@@ -427,7 +425,7 @@ Si la persona tiene su su cubrebocas y su temperatura es normal.
 
 Aqui un ejemplo ya en la pantalla.
 
-<img src="GIF DE EJEMPLO" width="300" />
+<img src="https://i.ibb.co/7Sb48LM/vlcsnap-2020-12-05-23h46m46s149.png" width="1000" />
 
 ### **FaceMask Dispenser**
 
