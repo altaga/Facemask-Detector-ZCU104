@@ -437,7 +437,7 @@ Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomot
 
 ------------------------------------------------------------------------------
 
-<img src="https://i.ibb.co/FBC2VcQ/ezgif-com-gif-maker-3.gif" width="1000" />
+<img src="https://i.ibb.co/jbMYDXK/ezgif-com-gif-maker-5.gif" width="1000" />
 
 ### **Temperature**
 
