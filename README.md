@@ -75,7 +75,7 @@ La mayoria de los devices en el mercado estan solo detectando el uso del cubrebo
 
 # **Solution**
 
-<img src="IMAGEURL" width="1000">
+<img src="https://i.ibb.co/vvD8Xmx/20201205-164641-2-1.png" width="600">
 
 # **Materials**
 
