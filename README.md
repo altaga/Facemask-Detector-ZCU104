@@ -41,7 +41,7 @@ FPGA-based system that monitors facemask use through artificial intelligence, in
   - [**Final Code**](#final-code)
 - [**Final Product**](#final-product)
 - [**Epic DEMO**](#epic-demo)
-- [**Commentary and Future Rollout**](#commentary-and-future-rollout)
+- [**Closing**](#closing)
 - [**References**](#references)
 - [**APPENDIX A**](#appendix-a)
 
