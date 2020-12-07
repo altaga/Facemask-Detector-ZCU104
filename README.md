@@ -1,6 +1,6 @@
 # **Facemask-Detector-ZCU104**
 
-FPGA-based system that monitors facemask use through artificial intelligence, thermometer and facemask dispenser.
+FPGA-based system that monitors facemask use through artificial intelligence, includes a thermometer and facemask dispenser.
 
 <img src="https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png" width="500">
 
@@ -47,19 +47,19 @@ FPGA-based system that monitors facemask use through artificial intelligence, th
 
 # **Introduction**
 
-El COVID-19 ha cambiado nuestro dia a dia y continúa haciéndolo. Muchos negocios y empresas han quebrado ya que al cerrar, no han podido ofrecer sus servicios a sus clientes, sin embargo algunos otros han optado por la reapertura de sus comercios a su vez tambien han abierto los institutos públicos como museos, bibliotecas, etc. Todos estos establecimientos han tomando sus medidas de precaucion, generando nuevas normativas, tales como obligar a los clientes y / o visitantes a usar máscaras faciales en todo momento [1](#1).
+COVID-19 has changed our daily lives and continues to do so. Many retail stores and companies have gone out of business, unable to offer their services to their clients. However some others which have opted for the reopening of their businesses in turn have had to adapt to the times.This includes public institutions such as museums, libraries, etc. All these establishments have taken their precautionary measures, generating new regulations, such as forcing customers and / or visitors to wear face masks at all times. [1](#1).
 
 <img src="https://i.ibb.co/8xsD8DZ/image.png" width="1000">
 
-Ante esta nueva normativa los negocios han tenido que generar un puesto de empleo para que un trabajador revise el uso del cubrebocas y revise la temperatura de los clientes antes de entrar al establecimiento, arriesgando no solo al trabajador que esta checando la temperatura de los clientes, sino a los clientes mismos que entran al lugar. 
+Given this new environment, businesses have had to create neew kinds of jobs or jobs to be done. One of these is to check the use of the mask and check the temperature of the customers before entering the establishment, risking not only the worker who is checking the temperature of the customers, but to the customers who enter the place.
 
 1. https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiX_NyUiqU0d44aUqMNK7LVrXMOQWMfqr0MUUo8TKrJLpObf91qRUcUaAjKbEALw_wcB
 
 # **Problem**
 
-Este puesto de trabajo genera un costo anual por trabajador de almenos $30,000 [1] y si ese empleado llegara a enfermarse de covid-19 por ley en estados unidos tendrian que pagarle almenos $511 al dia [2].
+This job generates an annual cost per worker of at least $30,000 [1] and if that employee were to become ill with covid-19, by law (in the United States) they would have to pay him at least $511 a day [2].
 
-Este costo por un empleado que realiza una tarea repetitiva es excesivo pero necesario, debido a que las soluciones actualmente creadas aun no son suficientes para sustituir este puesto.
+These costs (both moneetary and health wise) for an employee who performs a repetitive task is excessive but necessary, because the solutions currently created are not yet sufficient to replace this position.
 
 - The Xovis all-in-one solution - https://www.xovis.com/en/products/detail/face-mask-detection/
     - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
@@ -68,7 +68,7 @@ Este costo por un empleado que realiza una tarea repetitiva es excesivo pero nec
 - Leewayhertz - https://www.leewayhertz.com/face-mask-detection-system/
     - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
 
-La mayoria de los devices en el mercado estan solo detectando el uso del cubrebocas, sin embargo este proyecto busca genera una solucion completa para el control de accesos.
+Most of the devices on the market only detect the use of the mask, however this project seeks to generate a complete solution for access control.
 
 1. https://www.ziprecruiter.com/Salaries/Retail-Security-Officer-Salary
 2. https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf
@@ -133,20 +133,20 @@ ZCU104 Processing:
 
 ## **Model**
 
-Para poder resolver este problema de la deteccion del uso de cubre bocas es necesario realizar una CCN (convolutional neural network) la cual sea capaz de idetificar en una imagen de un rostro humano si esta usando un cubrebocas o no.
+In order to solve the problem of detecting the use of masks, it is necessary to carry out a CCN (convolutional neural network) which is capable of identifying if a human face is  wearing a mask.
 
 <img src="https://i.ibb.co/WF6Q64G/image-2.png" width="1000">
 
-Para entrenar una CCN como sabemos es necesario utilizar un gran numero de imaganes, las cuales le serviran a las convoluciones como ejemplos para poder filtrar correctamente las cacarteristicas de las imaganes y con eso poder dar un resultado.
+To train a CCN as we know, it is necessary to use a large number of images. Which will serve the convolutions as examples to be able to correctly filter the characteristics of the images and thus be able to give a result.
 
 ## **Training Dataset**
 
-En esta caso como dataset utilice 1916 imaganes positivas y 1930 imaganes negativas.
+In this case, we used 1916 positive images and 1930 negative images as the dataset.
 
 https://www.kaggle.com/altaga/facemaskdataset
 https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/facemask-dataset
 
-Te invito a revisar el dataset para comprobar las imaganes por ti mismo, la estructura de las capetas es:
+I invite the reader to review the dataset and to check the images yourself, the structure of the folders is:
 
 - Dataset
     - Yes
@@ -156,51 +156,51 @@ Te invito a revisar el dataset para comprobar las imaganes por ti mismo, la estr
         - IMG#
         - IMG#
 
-La clasificacion que buscamos lograr con esta CNN es la siguiente.
+The classification that we seek to achieve with this CNN is the following:
 
 <img src="https://i.ibb.co/Sc74RBS/image.png" width="1000">
 
 ## **Train Environment Setup**
 
-Para realizar el entrenamiento de la red neuronal correctamente es necesario utilizar el environment que nos ofrece Xilinx para AI adaptado a modelos enfocados para DPU el cual se ejecuta en Ubuntu 18.04.3.
+To perform the neural network training correctly, it is necessary to use the environment that Xilinx offers us for AI adapted to models focused on DPU which runs on Ubuntu 18.04.3.
 
 http://old-releases.ubuntu.com/releases/18.04.3/
 
-NOTA: SOLO EN ESTA VERSION DE UBUNTU ES COMPATIBLE EL ENVIROMENT, UNA VEZ INSTALES LA MAQUINA VIRTUAL NO ACTUALICES NADA, YA QUE NO PODRAS USAR EL ENVIROMENT Y TENDRAS QUE INSTALAR TODO DENUEVO.
+NOTE: ONLY IN THIS UBUNTU VEERSION IS ENVIROMENT COMPATIBLE, ONCE YOU INSTALL THE VIRTUAL MACHINE, DO NOT UPDATE ANYTHING, SINCE YOU WILL NOT BE ABLE TO USE THE ENVIROMENT AND YOU WILL HAVE TO INSTALL EVERYTHING AGAIN.
 
 <img src="https://i.ibb.co/pnjvwMm/image.png" width="1000">
 
-En mi caso yo utilizo una maquina con Windows 10, asi que para relizar el entranamiento tuve que utiliza una maquina virtual en VMware.
+In my case I use a machine with Windows 10, so to do the training I had to use a virtual machine in VMware.
 
 https://www.vmware.com/mx.html
 
-Dentro de las opciones para instalar el environment hay una opcion para utilizar el GPU y otra CPU, ya que utilizo la maquina virtual yo usare la instalacion de CPU.
+Within the options to install the environment there is one to use the GPU and another CPU, since I use the virtual machine I will use the CPU installation.
 
 https://github.com/Xilinx/Vitis-AI
 
-Abre el terminal de linux y escribe los siguientes comandos.
+Open the linux terminal and type the following commands.
 
-En la carpeta Scripts ya les deje archivos .sh con los cuales podran instalar facilmente todos los archivos necesarios, estos archivos deben de estar en la carpeta de /home para que funcionen correctamente.
+In the Scripts folder I have already left several .sh files with which you can easily install all the necessary files, these files must be in the /home folder for them to work properly.
 
 1. Install Docker (1 - 2 minutes) if you already have Docker go to Script 2.
 
         sudo bash install_docker.sh
 
-2. Install the Vitis (10 - 20 minutes).
+2. Install Vitis (10 - 20 minutes).
 
         sudo bash install_vitis.sh
 
-NOTA: instala solo uno de los siguientes ENV segun tu preferencia.
+NOTE: install only one of the following ENV according to your preference.
 
 3. Install CPU or GPU Support.
 
-   - Instalando CPU (20 - 30 minutes).
+   - Installing CPU (20 - 30 minutes).
 
            sudo bash install_cpu.sh 
 
    OR
 
-   - Instalando el environment GPU (20 - 30 minutes).
+   - Installing the GPU environment (20 - 30 minutes).
 
            sudo bash install_gpu.sh
         
@@ -218,61 +218,61 @@ NOTA: instala solo uno de los siguientes ENV segun tu preferencia.
 
 <img src="https://i.ibb.co/yQ4qtXJ/image.png" width="1000">
 
-Si todo lo hiciste bien, deberias de ver una consola como esta.
+If you did everything right, you should see a console like this one.
 
-En el [Appendix A](#appendix-a) les dejo el contenido de los Scipts.
+In the [Appendix A](#appendix-a) you can see the Scripts content.
 
-## **Train the model**
+## **Training the model**
 
-Para realizar el entrenamiento, copia todos los archivos dentro de la carpeta de repositorio "Setup Notebook and Dataset" a la capeta Vitis-AI para el correcto funcionamiento del codigo.
+To carry out the training, copy all the files inside the "Setup Notebook and Dataset" repository folder to the Vitis-AI folder for the code to run properly.
 
-Justo como se ve en la imagen.
+Just as in the picture.
 
 <img src="https://i.ibb.co/zFyKSDM/image.png" width="1000">
 
-Ahora en la consola de comandos ejecutaremos el siguiente comando para abrir Jupyter Notebooks.
+Now in the command console we will execute the following command to open Jupyter Notebooks.
 
     jupyter notebook --allow-root
 
 <img src="https://i.ibb.co/9n01Vhn/image.png" width="1000">
 
-Abre el navegador y pega la liga que te aparecio en el terminal y abre el archivo.
+Open the browser and paste the link that appeared in the terminal and open the file.
 
 <img src="https://i.ibb.co/Zd4ZLsQ/image.png" width="1000">
 
-Una vez abierto el codigo en la pestaña de Kernel ejecuta todo como se muestra en la imagen.
+Once the code is open in the Kernel tab, it executes everything as shown in the image.
 
 <img src="https://i.ibb.co/5K1xhmF/image.png" width="1000">
 
-Todo el codigo esta explicado a detalle, para profundizar en el porfavor revisarlo.
+All the code is explained in detail. To understand it fully, please review it.
 
 https://github.com/altaga/Facemask-Detector-ZCU104/blob/main/Setup%20Notebook%20and%20Dataset/train_facemask_model.ipynb
 
-Al final de la ejecucion si todo funciono bien deberemos de ver el siguiente resultado.
+After the excecution, if everything worked well we should see the following result.
 
 <img src="https://i.ibb.co/RvhDfpD/image.png" width="1000">
 
-De este proceso obtendremos un archivo llamado "dpu_face_binary_classifier_0.elf".
+From this process we will obtain a file called "dpu_face_binary_classifier_0.elf".
 
-Este archivo tiene guardado el modelo que usaremos mas adelante y que ya se los proprocione en la carpeta "Main Notebook".
+This file has saved the model that we will use later and that has been already provided in the "Main Notebook" folder.
 
 ## **Board Setup**
 
-La configuracion de la board es muy sencilla, en primer lugar tendras que descargar el sistema operativo PYNQ.
+The board setup is very simple, first you will have to download the PYNQ operating system.
 
 http://bit.ly/zcu104_v2_6
 
-Una vez tengas este sistema operativo flash, el sistema operativo con algun programa como Balena Etcher en la SD incluida en el Kit, recomiendo una memoria de almenos 16Gb.
+Once you have this, flash the operating system with a program like Balena Etcher onto the SD included in the Kit. I recommend a memory of at least 16Gb.
 
 https://www.balena.io/etcher/
 
 <img src="https://i.ibb.co/VjR44R3/image.png" width="1000">
 
-Ahora antes de conectar la SD en la Board, conectarla y encederla. Revisa los switches arriba de la board que esten en la siguiente posicion. Esto habilitara el boot desde SD.
+Now, before attaching the SD to the Board, plug it to power and turn it on. Check that the switches above the board are in the following position. This will enable boot from SD.
 
 <img src="https://i.ibb.co/5F6YFp9/20201121-230416.jpg" width="600">
 
-Pasos a Seguir la encender la board por primera vez:
+Steps to follow when turning on the board for the first time:
 
 <img src="https://pynq.readthedocs.io/en/v2.5.1/_images/zcu104_setup.png" width="600">
 
@@ -288,7 +288,7 @@ Connect the Ethernet port to your PC.
 
 Turn on the board and check the boot sequence.
 
-Una vez termine el boot de la board, desde tu navegador entra a la siguiente direccion IP para tener acceso un portal con Jupyer Notebook.
+Once the board has finished booting, from your browser enter the following IP address to access a portal with Jupyer Notebook.
 
 http://192.168.2.99
 
@@ -296,23 +296,23 @@ Password:xilinx
 
 ## **Test Pynq**
 
-Primero haremos una pequeña prueba para ver su el sistema operativo esta funcionando correctamente, vamos a setear el WiFi, esto ademas de indicarnos que instalamos correctamente el OS nos servira para descargar las librerias faltantes para nuestro proyecto.
+First we will do a small test to see if the operating system is working correctly. We will set the WiFi, this in addition to indicating that we installed the OS correctly will help us to download the missing libraries for our project.
 
 <img src="https://i.ibb.co/wWL7zb3/image.png" width="1000">
 
-NOTA: Como indicamos en materiales necesitan una tarjeta usb wifi externa para hacer funcionar el internet.
+NOTE: As we indicated in the materials section, this needs an external usb wifi card to conneect to the internet.
 
 <img src="https://i.ibb.co/4mbGVmX/image.png" width="1000">
 
-Si todo funciona bien obtendremos de la linea de ping la siguiente respuesta.
+If everything works well, we will get the following response from the ping line:
 
 <img src="https://i.ibb.co/ZTzbSdF/image.png" width="1000">
 
-Ahora instalaremos las librerias flatantes para hacer funcionar el DPU en la ZCU104. Vamos a abrir una terminal de comandos como se muestra en la imagen.
+Now we will install the missing libraries to make the DPU work on the ZCU104. We are going to open a command terminal as shown in the image.
 
 <img src="https://i.ibb.co/gj2NBS8/image.png" width="1000">
 
-Desde la terminal tenemos que escribir el siguiente comando, puedes copiar y pegarlo todo a la vez.
+From the terminal we have to write the following command, you can copy and paste it all at once.
 
     git clone --recursive --shallow-submodules https://github.com/Xilinx/DPU-PYNQ \
     && cd DPU-PYNQ/upgrade \
@@ -323,31 +323,31 @@ Desde la terminal tenemos que escribir el siguiente comando, puedes copiar y peg
 
 <img src="https://i.ibb.co/2NMqD34/image.png" width="1000">
 
-Este proceso puede tomar algo de tiempo segun tu conexion a internet.
+This process may take some time depending on your internet connection.
 
 ## **Test Model**
 
-Para testear el modelo tenemos que bajar la capeta de github a nuestra board con el siguiente comando.
+To test the model we have to download the github folder to our board with the following command.
 
     git clone https://github.com/altaga/Facemask-Detector-ZCU104
 
-Si prefieres tambien puedes pasar solo los archivos de la carpeta "Test Notebook" y "Main Notebook" a la board.
+If you prefer you can also transfer only the files from the "Test Notebook" and "Main Notebook" folders to the board.
 
-Dentro de la carpeta Test Notebook, entraremos al archivo "Facemask-ZCU104.ipynb".
+Inside the Test Notebook folder, we will enter the file "Facemask-ZCU104.ipynb".
 
-Todo el codigo esta explicado a detalle, para profundizar en el porfavor revisarlo.
+All the code is explained in detail, to deepen please review it.
 
-Al correr todo vemos una imagen como esta, significa que todo ha funcionado correctamente.
+When running everything we see an image like this, it means that everything has worked correctly.
 
 <img src="https://i.ibb.co/ZLHmLq4/image.png" width="600">
 
 ## **Comparison Benchmarks:**
 
-Para este concurso crei importante demostrar la superioridad de las FPGA ante HW convencional y HW dedicado AI, al momento de realizar procesamiento en redes neuronales, asi que adapte el codigo de mi modelo para correr en 2 HW que cualquiera podria tener como desarrollador.
+For this contest I thought it was important to demonstrate the superiority of FPGAs over conventional HW and AI dedicated HW, when processing neural networks. So, I adapted the code of my model to run on 2 HW that anyone could have as a developer.
 
 ### **Algorithm**
 
-Debido a que todos los codigos contienen desplegado de el resultado en pantalla, lo cual quita mucho tiempo, el calculo de los FPS se realizo con el siguiente algoritmo.
+Because all the codes display the result on screen, which takes a lot of time, the calculation of the FPS was carried out with the following algorithm.
 
 ![FPS](https://i.ibb.co/qkTRsj7/FPS.png)
 
@@ -379,57 +379,57 @@ Debido a que todos los codigos contienen desplegado de el resultado en pantalla,
 <img src="https://i.ibb.co/yWxNvS6/Final-Benchmark.png" width="1000" />
 </kbd>
 
-Para mas detalles entrar en la carpeta, dentro de cada carpeta estan los codigos para entrenar y ejecutar el modelo ademas de evidencia en video y fotografica de como funciona en tiempo real.
+For more detail go to the folder, within each folder there is code(s) to train and run the model(s) as well as video and photographic evidence of how it works in real time.
 
 https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Benchmarks%20Notebooks
 
 ## **Extra Hardware Development:**
 
-Para realizar la medicion de la temperatura de las personas y el dispensador de Facemask realice el siguiente circuito con un ESP32.
+To measure the useer's temperature and the Facemask dispenser, we created the following circuit with an ESP32.
 
 <kbd>
 <img src="https://i.ibb.co/GPxyQNC/Untitled-Sketch-bb.png" width="1000" />
 </kbd>
 
-Todo el control de este device se hizo a travez de BLE, con el fin de utilizar la menor cantidad de bateria del dispositivo.
+Control of this device was done through BLE, in order to use the least amount of battery.
 
 ### **Display**
 
-El display tiene la funcion de mostrar diferentes mensajes, segun el resultado de la lectura de la ZCU104 y el sensor de temperatura.
+The display has the function of showing different messages, according to the result of the reading of the ZCU104 and the temperature sensor.
 
-Pagina para convertir imagenes a imgenes desplegables en la pantalla, las imaganes tienen que ser hechas casi a mano como PIXELART para poder desplegarlas bien y que se vean bien:
+Page to convert images to scrollable images on the screen, the images have to be made almost by hand like PIXELART to be able to display them well:
 
 https://sparks.gogo.co.nz/pcd8554-bmp.html
 
-Descripcion:
+Description:
 
-Mientras no se este realizando una lectura, obtendremos el siguiente mensaje.
+While a reading is not taking place, we will get the following message.
 
 <img src="https://i.ibb.co/QJzTX9N/Untitledg.png" width="300" />
 
-Si la persona no tiene un cubre bocas, mostraremos este mensaje.
+If the user does not have a facemask, we will display this message.
 
 <img src="https://i.ibb.co/RQFsM7y/sam.png" width="300" />
 
-Antes de tomar la temperatura se desplegara esta imagen para que el cliente acerque su mano al sensor.
+Before taking the temperature, this image will be displayed so that the useer may bring his hand next to the sensor.
 
 <img src="https://i.ibb.co/Ny5CR8N/temp.png" width="300" />
 
-Si la persona trae cubrebocas pero su temperatura es muy alta.
+If the user wears a mask but his/her temperature is very high.
 
 <img src="https://i.ibb.co/G3PzXqN/Dontpass.png" width="300" />
 
-Si la persona tiene su su cubrebocas y su temperatura es normal.
+If the user has his face mask and his temperature is normal.
 
 <img src="https://i.ibb.co/LdFdJZ3/wel.png" width="300" />
 
-Aqui un ejemplo ya en la pantalla.
+Here is an example already on the screen.
 
 <img src="https://i.ibb.co/7Sb48LM/vlcsnap-2020-12-05-23h46m46s149.png" width="1000" />
 
 ### **FaceMask Dispenser**
 
-Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomotor, ofrecera uno al cliente para que el cliente pueda pasar a la etapa de medicion de la temperatura.
+If the ZCU104 reading indicates that the person does not have a facemask, the servomotor will offer one to the customer so that the customer can move on to the temperature measurement stage.
 
 ------------------------------------------------------------------------------
 
@@ -441,11 +441,11 @@ Si la lectura de la ZCU104 indica que la persona no trae cubrebocas, el servomot
 
 ### **Temperature**
 
-Cuando la ZCU104 indique que la persona esta usando cubrebocas se le tomara la temperatura de la mano.
+When the ZCU104 indicates that the person is wearing a mask, the temperature of the hand will be taken.
 
 <img src="https://i.stack.imgur.com/HK7op.gif" width="1000" />
 
-Para realizar el calculo de la temperatura real del cuerpo se realizo una regresion lineal multivariable para obtener una ecuacion que nos relacionara la temperatura del dorso de la mano, la temperatura ambiente, para obtener la temperatura real interna del cuerpo.
+To calculate the real temperature of the body, a multivariable linear regression model was performed to obtain an equation that would relate the temperature of the back of the hand and the ambient temperature, to obtain the real internal temperature of the body.
 
 <img src="https://i.ibb.co/Rgm108g/image.png" width="1000">
 
@@ -453,7 +453,7 @@ Para realizar el calculo de la temperatura real del cuerpo se realizo una regres
 
 <img src="https://i.ibb.co/qppjkm3/ezgif-com-gif-maker-6.gif" width="1000">
 
-En este caso tomaremos como temperatura de refrencia maxima la sugerida por la CDC [1] que es de 100.4 °F. En el caso de que la temperatura sea mayor a 100.4 °F no podremos dejar que la persona pase al establecimiento.
+In this case we will take as the maximum reference temperature the one suggested by the CDC [1], which is 100.4 ° F. In the event that the temperature is higher than 100.4 ° F, we will not be able to let the person enter the establishment.
 
 <img src="https://i.ibb.co/D1TrFgx/ezgif-com-gif-maker-7.gif" width="1000" />
 
@@ -462,13 +462,13 @@ En este caso tomaremos como temperatura de refrencia maxima la sugerida por la C
 
 ## **Extra Software Development**
 
-A su vez que tenemos un dispositivo que es autonomo en su tarea, debemos de tener una forma de visualizar lo que esta viendo el dispositivo de manera remota, asi que se creo una sencilla aplicacion basada en el framework de React Native para esta tarea.
+In turn, as we have a device that is autonomous in its task. We must have a way to visualize what the device is seeing remotely, so a simple application based on the React Native framework was created for this task.
 
 Features:
-- Comunicacion basada en MQTT.
-- Capacidad de guardar imaganes con un boton.
-- Capacidad de visualizar la IP y puerto del servidor.
-- Capacidad de poder cambiar entre dispositivos en el caso de que el establecimiento tenga multiples entradas.
+- MQTT based communication.
+- Save images with a button.
+- View the IP and port of the server.
+- Capacity to switch between devices in the event that the establishment has multiple entrances.
 - Plug and Play.
 
 <img src="https://i.ibb.co/2NJGfTJ/Icon.png" height="500" />
@@ -483,29 +483,33 @@ Features:
 
 (Smartphone: Huawei Y6P).
 
-Puede instalar la APK la cual esta en la carpeta "MonitorMqtt-APK" o construirla usted mismo, todo el codigo fuente de la app esta en la carpeta "MonitorMqtt", recuerde que utilizamos el framework React Native.
+You can install the APK which is in the "MonitorMqtt-APK" folder or build it yourself, all the source code of the app is in the "MonitorMqtt" folder. Remember that we use the React Native framework.
 
-Si tu celular tiene habilitado el modo USB debugger, puedes instalar la app desde tu pc con el siguiente comando estando en la capeta "MonitorMqtt-APK".
+If your cellphone has USB debugger mode enabled, you can install the app from your pc with the following command while in the "MonitorMqtt-APK" folder.
 
     adb install App.apk
-
-Gif con la app funcionando.
+    
+Gif with the app running.
 
 <img src="https://i.ibb.co/0qkzYYh/ezgif-com-gif-maker-2.gif" height="700" />
 
 ## **Final Code**
 
-Ya en este momento tenemos un dispositivo BLE con el cual nos podemos comunicar de forma inalambrica. 
+At this time we already have a BLE device with which we can communicate wirelessly.
 
-Una vez la ZCU104 obtenga almenos 3 leturas correctas, mandaremos la señal al ESP32 que pase a la fase de toma de temperatura, una vez el cliente pase esta fase, se le permitira la entrada al establecimiento.
+Once the ZCU104 obtains at least 3 correct readings, we will send the signal to the ESP32 to go to the temperature taking phase. Once the client passes this phase, they will be allowed to enter the establishment.
 
 <img src="https://i.ibb.co/r3g16Gy/olovrgo.png" width="1000" />
 
-El codigo en la la carpeta "Main Notebook" realiza todo este proceso.
+The code in the "Main Notebook" folder carriees out all this process.
 
 Link: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Main%20Notebook
 
 # **Final Product**
+
+## WE ACTUALLY TESTED IT IN A WORKING BUSINESS
+
+This was perhaps the most important part of the whole project. We have had built a pretty good proof of concept, but technology exists to be used and businesses have been hit the hardest by COVID-19, specially the small and medium ones. So , first and foremost we attempted to find a business nearby that operates and has to have its clients wearing a mask (and that will allow us to test the PoC). What came to mind first were restaurants, 7 eleven-ish stores and supermarkets. As naive as we were, we went first to several supermarkets to just try and se if they would allow us to test the PoC and record its functionality. Of course, we were soundly rejected. Later we tried with an Ice-cream store after several attempts with supermarkets and 7elevens. And they finally allowed us to test it and record some results that you can see in our demo video! 
 
 ZCU104:
 
@@ -530,9 +534,9 @@ Video: Click on the image
 
 Sorry github does not allow embed videos.
 
-# **Commentary and Future Rollout**
+## Closing
 
-<img src="Inventate algo chulo" width="1000" />
+The final PoC offers an alternative for access control for several kinds of businesses. This is a problem that nowadays affects everyone and will do for the near future. Most experts are expecting this kind of measures to be necessary for the foreseeable future. It is true that the vaccines will start to roll out in December, but for herd immunity and its effects to take place, it will take a couple years if not more. The problem of access control to businesses and institutions has to be automated without question, we have shown to have the proper technology to accomplish this and it should be done via creative use of bleeding edge technology such as the application here presented. Thank you for reading and supporting the project. 
 
 # **References**
 
