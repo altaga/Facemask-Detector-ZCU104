@@ -22,7 +22,7 @@ FPGA-based system that monitors facemask use through artificial intelligence, in
   - [**Model**](#model)
   - [**Training Dataset**](#training-dataset)
   - [**Train Environment Setup**](#train-environment-setup)
-  - [**Train the model**](#train-the-model)
+  - [**Training the model**](#training-the-model)
   - [**Board Setup**](#board-setup)
   - [**Test Pynq**](#test-pynq)
   - [**Test Model**](#test-model)
@@ -40,8 +40,9 @@ FPGA-based system that monitors facemask use through artificial intelligence, in
     - [**Screenshots and App running**:](#screenshots-and-app-running)
   - [**Final Code**](#final-code)
 - [**Final Product**](#final-product)
+  - [WE ACTUALLY TESTED IT IN A WORKING BUSINESS](#we-actually-tested-it-in-a-working-business)
 - [**Epic DEMO**](#epic-demo)
-- [**Closing**](#closing)
+  - [Closing](#closing)
 - [**References**](#references)
 - [**APPENDIX A**](#appendix-a)
 
@@ -62,11 +63,11 @@ This job generates an annual cost per worker of at least $30,000 [1] and if that
 These costs (both moneetary and health wise) for an employee who performs a repetitive task is excessive but necessary, because the solutions currently created are not yet sufficient to replace this position.
 
 - The Xovis all-in-one solution - https://www.xovis.com/en/products/detail/face-mask-detection/
-    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+    - Only detection of the use of face masks, without temperature measurement, or access control.
 - SecurOS™ Face Mask Detection - https://issivs.com/facemask/
-    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+    - Only detection of the use of face masks, without temperature measurement, or access control.
 - Leewayhertz - https://www.leewayhertz.com/face-mask-detection-system/
-    - Solo deteccion de uso de cubrebocas, sin medicion de temperatura, ni control de accesos.
+    - Only detection of the use of face masks, without temperature measurement, or access control.
 
 Most of the devices on the market only detect the use of the mask, however this project seeks to generate a complete solution for access control.
 
@@ -530,7 +531,7 @@ Complete solution working in local business
 # **Epic DEMO**
 
 Video: Click on the image
-<!--[![Facemask](https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png)](PENDING)-->
+[![Facemask](https://i.ibb.co/P5DR54T/camera-clip-art-black-and-white-14-1.png)](https://youtu.be/JvX8qyEyo_4)
 
 Sorry github does not allow embed videos.
 
