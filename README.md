@@ -6,7 +6,7 @@ FPGA-based system that monitors facemask use through artificial intelligence, in
 
 # **Welcome**
 
-<img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000">
+<img src="https://i.ibb.co/mbgSBrs/New-Project-2.png" width="1000"> 
 
 # **Table of contents**
 
