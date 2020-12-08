@@ -1,16 +1,16 @@
 # Jetson Nano
 
-Toda la informacion de la jetson nano estara en este link:
+All the information about the jetson nano is in this link:
 
 https://developer.nvidia.com/embedded/jetson-nano-developer-kit
 
-Para entrenar y correr el modelo se utilizo el siguiente sistema operativo en la jetson:
+To train and run the model, the following operating system is used on the jetson:
 
 https://github.com/NVIDIA-AI-IOT/jetbot
 
-Se utilizo una camara USB para realizar las pruebas en el modelo
+A USB camera is used to perform the tests on the model. 
 
-Las librerias utilizadas para correr el modelo fueron:
+The libraries used to run the model were:
 
 - TensorFlow (Pre-installed 1.13)
 - Keras
@@ -18,14 +18,14 @@ Las librerias utilizadas para correr el modelo fueron:
 - OpenCV
 - Pillow
 
-Para instalar las librerias excepto TFlite Interpreter:
+To install the libraries except TFlite Interpreter:
 
     sudo apt-get install keras sklearn python3-opencv
     pip3 install Pillow
 
-El modelo puede ser entrenado y ejecutado en la misma Jetson Nano con el fin de facilitar la ejecucion del codigo.
+The model can be trained and run on the same Jetson Nano in order to facilitate code execution.
 
-NOTA: el codigo ya contiene el comando para descargar el dataset dentro de la jetson, sin embargo aqui te dejamos las dos opciones para descargar el dataset.
+NOTE: the code already contains the command to download the dataset within the jetson, however here we leave you the two options to download the dataset.
 
 - Github: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Setup%20Notebook%20and%20Dataset/facemask-dataset
 - Kaggle: https://www.kaggle.com/altaga/facemaskdataset

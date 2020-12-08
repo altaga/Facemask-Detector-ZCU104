@@ -1,10 +1,10 @@
 # RPi vs Jetson vs ZCU104
 
-Se realizaron test de las siguientes boards para comparar si esta siendo mejor el uso de la ZCU104 para este tipo de problemas.
+The following boards were tested to compare whether the use of the ZCU104 is being better for this type of problem.
 
 # Algorithm:
 
-Debido a que todos los codigos contienen desplegado de el resultado en pantalla, lo cual quita mucho tiempo, el calculo de los FPS se realizo con el siguiente algoritmo.
+Because all the codes contain display of the result on the screen, which takes a lot of time, the calculation of the FPS was carried out with the following algorithm.
 
 ![FPS](https://i.ibb.co/qkTRsj7/FPS.png)
 

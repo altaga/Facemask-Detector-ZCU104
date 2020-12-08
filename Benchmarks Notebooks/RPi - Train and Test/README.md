@@ -1,29 +1,28 @@
 # RPi4
 
-Toda la informacion de la RPi4 estara en este link:
+All the information about the RPi4 will be in this link:
 
 https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?resellerType=home
 
-Para entrenar el modelo se utilizo un Notebook en Google Colab con el fin de facilitar el entrenamiento del modelo.
+To train the model, a Notebook in Google Colab is used in order to facilitate the training of the model.
 
 https://github.com/altaga/Facemask-Detector-ZCU104/blob/main/Benchmarks%20Notebooks/RPi%20-%20Train%20and%20Test/Train/RPi_Train_Models.ipynb
 
-El sistema operativo que se instalo en la raspberry fue Raspberry OS:
+The operating system that was installed on the raspberry was Raspberry OS:
 
 https://www.raspberrypi.org/downloads/raspberry-pi-os/
 
-NOTA: El codigo se realizo para funcionar con la camara integrada de la raspberry.
+NOTE: The code was made to work with the raspberry's built-in camera.
 
-Para instalar las librerias excepto TFlite Interpreter:
-
+To install the libraries except TFlite Interpreter:
     sudo apt-get install libatlas-base-dev python3-opencv
     pip3 install Pillow
 
-Para instalar TFlite Interpreter:
+To install TFlite Interpreter:
 
     pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
 
-NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el dataset en la plataforma de Google Colab, sin embargo aqui te dejo las dos opciones para descargar el dataset.
+NOTE: the code for the training already contains the command to download the dataset on the Google Colab platform, however, here I leave you the two options to download the dataset.
 
 - Github: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Setup%20Notebook%20and%20Dataset/facemask-dataset
 - Kaggle: https://www.kaggle.com/altaga/facemaskdataset

@@ -1,27 +1,27 @@
 # ZCU104
 
-NOTA: AQUI NO HAY CARPETA DE TRAIN NI TEST YA QUE ESAS ESTAN EN LA CARPETA PRINCIPAL.
+NOTE: THERE IS NO TRAIN OR TEST FOLDER HERE AS THOSE ARE IN THE MAIN FOLDER.
 
-Toda la informacion de la ZCU104 estara en este link:
+All the information about the ZCU104 will be in this link:
 
 https://www.xilinx.com/products/boards-and-kits/zcu104.html
 
-Para entrenar el modelo se utilizo un Notebook en corriendo con el backend de Vitis-AI en una maquina Ubuntu 18.04.3.
+To train the model, a Notebook is used running with the Vitis-AI backend on an Ubuntu 18.04.3 machine. 
 
-Backend para entrenamiento de la red neuronal:
+Backend for neural network training:
 
 https://github.com/Xilinx/Vitis-AI
 
-Todo el proceso de instalacion, ejecucion del backend, entrenamiento y deploy del modelo se explicara a detalle en el readme principal.
+The entire process of installation, execution of the backend, training and deployment of the model will be explained in detail in the main readme.
 
 https://github.com/altaga/Facemask-Detector-ZCU104
 
-El sistema operativo que se instalo en la ZCU104 fue PYNQ:
+The operating system that was installed on the ZCU104 was PYNQ:
 
 Main Page: http://www.pynq.io/board.html
 OS Direct download: http://bit.ly/zcu104_v2_6
 
-NOTA: el codigo para el entrenamiento ya contiene el comando para descargar el dataset en ubuntu, sin embargo aqui te dejo las dos opciones para descargar el dataset.
+NOTE: the code for the training already contains the command to download the dataset in Ubuntu, however here I leave you the two options to download the dataset.
 
 - Github: https://github.com/altaga/Facemask-Detector-ZCU104/tree/main/Setup%20Notebook%20and%20Dataset/facemask-dataset
 - Kaggle: https://www.kaggle.com/altaga/facemaskdataset
